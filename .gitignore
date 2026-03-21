@@ -1,0 +1,5 @@
+# Gitignore para Coffeecito Landing Page
+.DS_Store
+node_modules/
+.env
+*.log
