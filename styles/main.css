@@ -485,6 +485,17 @@ h1, h2, h3 { font-family: var(--font-display); line-height: 1.15; }
   width: max-content;
   animation: marqueeScroll 28s linear infinite;
 }
+.marquee-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  white-space: nowrap;
+}
+.marquee-logo {
+  font-size: 1rem;
+  line-height: 1;
+  filter: grayscale(20%);
+}
 .marquee-brand {
   font-family: var(--font-display);
   font-size: 1.05rem;
@@ -494,7 +505,7 @@ h1, h2, h3 { font-family: var(--font-display); line-height: 1.15; }
   opacity: 0.75;
   transition: opacity var(--transition);
 }
-.marquee-brand:hover { opacity: 1; }
+.marquee-item:hover .marquee-brand { opacity: 1; }
 .marquee-sep {
   color: var(--caramel);
   font-size: 0.8rem;
@@ -509,39 +520,109 @@ h1, h2, h3 { font-family: var(--font-display); line-height: 1.15; }
 .reels-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 2rem;
+  gap: 1.5rem;
   margin-top: 2.5rem;
 }
 .reel-card {
+  display: block;
   background: var(--white);
   border-radius: var(--radius-lg);
   overflow: hidden;
   box-shadow: var(--shadow-sm);
   transition: all var(--transition);
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
 }
 .reel-card:hover {
   transform: translateY(-6px);
   box-shadow: var(--shadow-md);
 }
-.reel-embed { min-height: 300px; }
-.reel-embed .instagram-media {
-  margin: 0 !important;
-  min-width: unset !important;
-  width: 100% !important;
-  border-radius: 0 !important;
+.reel-thumb {
+  position: relative;
+  aspect-ratio: 9/14;
+  background-size: cover;
+  background-position: center;
+  background-color: var(--blush);
+  overflow: hidden;
+}
+.reel-thumb::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(59,35,20,0.1) 0%,
+    rgba(59,35,20,0.45) 100%
+  );
+  transition: background var(--transition);
+}
+.reel-card:hover .reel-thumb::after {
+  background: linear-gradient(
+    to bottom,
+    rgba(59,35,20,0.15) 0%,
+    rgba(59,35,20,0.6) 100%
+  );
+}
+.reel-play-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  width: 56px;
+  height: 56px;
+  background: rgba(255,255,255,0.25);
+  backdrop-filter: blur(8px);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--transition);
+  border: 1.5px solid rgba(255,255,255,0.5);
+}
+.reel-card:hover .reel-play-btn {
+  background: rgba(255,255,255,0.4);
+  transform: translate(-50%, -50%) scale(1.1);
+}
+.reel-ig-badge {
+  position: absolute;
+  top: 0.75rem;
+  left: 0.75rem;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  background: rgba(0,0,0,0.35);
+  backdrop-filter: blur(6px);
+  border-radius: var(--radius-xl);
+  padding: 0.3rem 0.65rem;
+  font-size: 0.72rem;
+  color: white;
+  font-weight: 500;
 }
 .reel-stat {
   padding: 0.85rem 1.25rem;
   font-size: 0.9rem;
   color: var(--text-light);
   border-top: 1px solid var(--border);
-  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
-.reel-stat strong {
+.reel-views strong {
   color: var(--espresso);
   font-family: var(--font-display);
-  font-size: 1.1rem;
+  font-size: 1.05rem;
 }
+.reel-cta {
+  font-size: 0.8rem;
+  color: var(--caramel);
+  font-weight: 600;
+  opacity: 0;
+  transition: opacity var(--transition);
+}
+.reel-card:hover .reel-cta { opacity: 1; }
 
 /* ═══════════════════════════════════════════════
    TARIFAS
