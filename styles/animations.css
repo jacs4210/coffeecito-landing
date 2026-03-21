@@ -1,0 +1,152 @@
+/* ══════════════════════════════════════════════════
+   COFFEECITO — ANIMACIONES
+   animations.css
+══════════════════════════════════════════════════ */
+
+/* ─── KEYFRAMES ───────────────────────────────── */
+@keyframes scrollBounce {
+  0%, 100% { transform: translateX(-50%) translateY(0); opacity: 1; }
+  50%       { transform: translateX(-50%) translateY(10px); opacity: 0.4; }
+}
+
+@keyframes marqueeScroll {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes scaleIn {
+  from { opacity: 0; transform: scale(0.94); }
+  to   { opacity: 1; transform: scale(1); }
+}
+
+@keyframes shimmer {
+  0%   { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50%       { transform: scale(1.04); }
+}
+
+/* ─── REVEAL ON SCROLL ───────────────────────── */
+.reveal {
+  opacity: 0;
+  transform: translateY(32px);
+  transition: opacity 0.7s cubic-bezier(.4,0,.2,1),
+              transform 0.7s cubic-bezier(.4,0,.2,1);
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Stagger reveal for grids */
+.stats-grid   .reveal:nth-child(1) { transition-delay: 0.05s; }
+.stats-grid   .reveal:nth-child(2) { transition-delay: 0.15s; }
+.stats-grid   .reveal:nth-child(3) { transition-delay: 0.25s; }
+.stats-grid   .reveal:nth-child(4) { transition-delay: 0.35s; }
+
+.reels-grid   .reveal:nth-child(1) { transition-delay: 0.05s; }
+.reels-grid   .reveal:nth-child(2) { transition-delay: 0.18s; }
+.reels-grid   .reveal:nth-child(3) { transition-delay: 0.31s; }
+
+.tarifas-grid .reveal:nth-child(1) { transition-delay: 0.05s; }
+.tarifas-grid .reveal:nth-child(2) { transition-delay: 0.15s; }
+.tarifas-grid .reveal:nth-child(3) { transition-delay: 0.25s; }
+.tarifas-grid .reveal:nth-child(4) { transition-delay: 0.35s; }
+.tarifas-grid .reveal:nth-child(5) { transition-delay: 0.45s; }
+
+/* ─── HERO ENTRANCE ──────────────────────────── */
+.hero-content.reveal {
+  animation: fadeUp 1s cubic-bezier(.4,0,.2,1) 0.3s both;
+  opacity: 1;
+  transform: none;
+}
+
+/* ─── BUTTON MICRO-ANIMATION ─────────────────── */
+.btn-primary {
+  position: relative;
+  overflow: hidden;
+}
+.btn-primary::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    110deg,
+    transparent 30%,
+    rgba(255,255,255,0.12) 50%,
+    transparent 70%
+  );
+  background-size: 200% 100%;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+.btn-primary:hover::after {
+  opacity: 1;
+  animation: shimmer 0.9s ease forwards;
+}
+
+/* ─── STAT NUMBER COUNTING ───────────────────── */
+.stat-number {
+  display: block;
+  transition: transform 0.2s;
+}
+.stat-card.counting .stat-number {
+  animation: pulse 0.4s ease;
+}
+
+/* ─── NAVBAR SCROLL INDICATOR ────────────────── */
+.navbar::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--caramel), var(--gold));
+  width: var(--scroll-progress, 0%);
+  transition: width 0.1s linear;
+}
+
+/* ─── FORM INPUT FOCUS GLOW ──────────────────── */
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  box-shadow: 0 0 0 3px rgba(232,201,160,0.2);
+}
+
+/* ─── TARIFA CARD HOVER GLOW ─────────────────── */
+.tarifa-card.popular {
+  box-shadow: 0 0 0 2px var(--caramel), var(--shadow-sm);
+}
+.tarifa-card.popular:hover {
+  box-shadow: 0 0 0 2px var(--caramel), var(--shadow-md);
+}
+
+/* ─── SUCCESS ANIMATION ──────────────────────── */
+.form-success {
+  animation: scaleIn 0.5s cubic-bezier(.4,0,.2,1) both;
+}
+.success-icon {
+  animation: pulse 1.2s ease infinite;
+  display: inline-block;
+}
+
+/* ─── SOCIAL PILL HOVER ──────────────────────── */
+.social-pill svg { transition: transform var(--transition); }
+.social-pill:hover svg { transform: rotate(-8deg) scale(1.1); }
+
+/* ─── FOOTER LINK HOVER ──────────────────────── */
+.footer-links a svg { transition: transform 0.3s; }
+.footer-links a:hover svg { transform: scale(1.2) rotate(-5deg); }

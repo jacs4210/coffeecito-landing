@@ -148,25 +148,30 @@ Angie recibe copia del lead
 
 ## 🚀 Fases de Implementación
 
-### Fase 1 — Fundación (Días 1–2)
+### ~~Fase 1 — Fundación~~ ✅ Completada
 
-- [ ] Optimizar el PDF para web (< 3 MB con Smallpdf o Adobe)
-- [ ] Crear repositorio en GitHub (`coffeecito-landing`)
-- [ ] Configurar cuenta en Netlify
-- [x] **Foto de Angie disponible:** `Photo_Angie_Correa.jpeg` (en el directorio del proyecto)
-- [ ] Conseguir logos PNG/SVG de marcas colaboradoras (MONIN, Miniso, Olímpica, etc.)
-- [ ] Verificar disponibilidad de `coffeecito.com` en Porkbun y registrar si está libre
+- [x] Estructura de carpetas del proyecto creada
+- [x] `Photo_Angie_Correa.jpeg` copiada a `assets/images/`
+- [x] Imagen hero generada → `assets/images/hero-bg.png`
+- [x] PDF copiado a `assets/pdf/coffeecito-media-kit.pdf`
+- [x] `netlify.toml` configurado para deploy
+- [x] `README.md` y `.gitignore` creados
+- [x] Repositorio Git inicializado — primer commit `ca27305`
+- [ ] Optimizar el PDF para web (< 3 MB) — pendiente manual con Smallpdf
+- [ ] Subir repositorio a GitHub (`coffeecito-landing`)
+- [ ] Crear cuenta en Netlify y conectar el repositorio
+- [ ] Conseguir logos PNG/SVG de marcas colaboradoras
 
-### Fase 2 — Frontend (Días 3–6)
+### Fase 2 — Frontend (En progreso 🔨)
 
-- [ ] Estructura base: `index.html`, `styles/main.css`, `scripts/main.js`
-- [ ] Sección Hero con foto y tagline
-- [ ] Sección "Sobre mí"
-- [ ] Contadores animados de estadísticas
-- [ ] Logo grid de marcas (scroll marquee)
-- [ ] Embed de Reels de Instagram
-- [ ] Cards de tarifas
-- [ ] Formulario de contacto
+- [x] Estructura base: `index.html`, `styles/main.css`, `styles/animations.css`, `scripts/main.js`
+- [x] Sección Hero con imagen de fondo y tagline
+- [x] Sección "Sobre mí" con foto de Angie
+- [x] Contadores animados de estadísticas (+77K, +370K, +622K)
+- [x] Logo grid de marcas (scroll marquee animado)
+- [x] Embed de Reels de Instagram
+- [x] Cards de tarifas con CTA
+- [x] Formulario de contacto (estructura HTML)
 
 ### Fase 3 — Formulario + Email (Día 7)
 
@@ -209,6 +214,35 @@ Al tener el dominio `.com`, activar el correo de la marca en dos pasos:
 
 > 💡 El correo con dominio propio refuerza la marca ante colaboradoras como MONIN o Miniso. Con Zoho Mail la cuenta queda gratis y profesional desde el primer día.
 
+#### 📲 WhatsApp Business — Separar lo personal de la marca
+
+El número actual (`310 422 6253`) es personal. Para la marca se recomienda un número dedicado con **WhatsApp Business App** — gratuita y pensada exactamente para este caso.
+
+**¿Por qué un número separado?**
+- Las marcas contactarán directamente a Angie por WhatsApp; mezclar mensajes personales con colaboraciones genera desorden.
+- WhatsApp Business permite tener una ficha de empresa, respuestas automáticas, catálogo y etiquetas de contactos.
+- El número personal queda totalmente privado.
+
+**Opciones para obtener el número de marca:**
+
+| Opción | Cómo | Costo |
+| ------- | ---- | ----- |
+| **SIM prepago ⭐** | Chip prepago de Claro/Movistar/Tigo (Colombia) dedicado a la marca | ~$5.000 – $10.000 COP |
+| **Número virtual** | [Google Voice](https://voice.google.com) *(solo EE.UU.)* — no aplica en Colombia | $0 USD |
+| **Número virtual CO** | [Dingaling](https://dingaling.com) o [Toky](https://toky.co) | ~$5–10 USD/mes |
+
+> 💡 **Recomendación:** Un chip prepago de Tigo o Claro es lo más sencillo y económico para Colombia. Se usa solo para WhatsApp Business; no es necesario que tenga plan de datos activo continuamente.
+
+**Configuración de WhatsApp Business App (gratis):**
+- [ ] Instalar [WhatsApp Business](https://business.whatsapp.com) con el número de marca
+- [ ] Completar el **perfil de empresa**: nombre `Coffeecito`, descripción, sitio web (`coffeecito.netlify.app`), email de marca
+- [ ] Configurar **mensaje de bienvenida** automático para nuevos contactos
+- [ ] Configurar **mensaje de ausencia** fuera de horario
+- [ ] Crear **respuestas rápidas** para consultas frecuentes (tarifas, disponibilidad)
+- [ ] Agregar el enlace de WhatsApp Business a la landing page: `https://wa.me/57XXXXXXXXXX?text=Hola%20Angie!%20Vi%20tu%20portafolio%20y%20me%20interesa%20colaborar%20%E2%98%95`
+
+> ⚠️ WhatsApp Business App **no puede convivir con WhatsApp personal en el mismo número**. Por eso se necesita el número separado.
+
 ---
 
 ## 📐 Estructura de Archivos
@@ -236,15 +270,16 @@ coffeecito-landing/
 
 ## 💰 Estimado de Costos
 
-| Ítem                   | Opción gratuita               | Opción recomendada                             |
-| ---------------------- | ----------------------------- | ---------------------------------------------- |
-| Hosting                | Netlify (free forever) — $0   | Netlify — $0                                   |
-| Subdominio             | `coffeecito.netlify.app` — $0 | `coffeecito.netlify.app` — $0                  |
-| Dominio personalizado  | — (no aplica)                 | `coffeecito.com` en Porkbun — **~$11 USD/año** |
-| Formulario + email PDF | EmailJS (200 mails/mes) — $0  | EmailJS — $0                                   |
-| **Total primer año**   | **$0 USD**                    | **~$11 USD/año**                               |
+| Ítem | Fase 1 (ahora) | Fase 6 (futuro) |
+| ---- | -------------- | --------------- |
+| Hosting | Netlify — **$0** | Netlify — **$0** |
+| Subdominio/Dominio | `coffeecito.netlify.app` — **$0** | `coffeecito.com` en Porkbun — **~$11 USD/año** |
+| Email | `angie_3791@hotmail.com` — **$0** | Zoho Mail con dominio propio — **$0** |
+| Formulario + envío PDF | EmailJS (200 mails/mes) — **$0** | EmailJS — **$0** |
+| WhatsApp | Personal (actual) — **$0** | SIM prepago marca + WA Business — **~$10.000 COP** |
+| **Total** | **$0 USD** | **~$11 USD/año + $10k COP una sola vez** |
 
-> ℹ️ Con la opción gratuita la URL quedaría `coffeecito.netlify.app` — funcional pero menos profesional. Con $11/año se tiene un dominio `.com` propio para siempre.
+> ℹ️ La Fase 6 convierte la landing en una identidad de marca completa por menos de $12 USD al año.
 
 ---
 

@@ -32,5 +32,3 @@ URL: `https://coffeecito.netlify.app` (pendiente de configurar)
 ## Contacto
 
 - Instagram: [@coffeecito.ac](https://instagram.com/coffeecito.ac)
-- Email: angie_3791@hotmail.com
-- WhatsApp: 310 422 6253
