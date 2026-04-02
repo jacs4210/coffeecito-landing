@@ -867,7 +867,12 @@ h1, h2, h3 { font-family: var(--font-display); line-height: 1.15; }
   height: 52px;
   width: auto;
   object-fit: contain;
-  filter: brightness(0) invert(1) sepia(1) saturate(1.5) hue-rotate(10deg);
+  filter: brightness(0) invert(1) grayscale(1); /* Logo blanco limpio sobre fondo oscuro */
+  opacity: 0.8;
+  transition: all var(--transition);
+}
+.footer-logo-link:hover .footer-logo-img {
+  opacity: 1;
 }
 .footer-tagline {
   font-size: 0.8rem;
