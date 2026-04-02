@@ -493,24 +493,34 @@ h1, h2, h3 { font-family: var(--font-display); line-height: 1.15; }
 .marquee-item {
   display: inline-flex;
   align-items: center;
-  gap: 0.4rem;
+  gap: 1rem; /* Aumentado para los logos */
   white-space: nowrap;
+  padding: 0 1rem;
 }
-.marquee-logo {
-  font-size: 1rem;
-  line-height: 1;
-  filter: grayscale(20%);
+.marquee-logo-img {
+  height: 28px;
+  width: auto;
+  object-fit: contain;
+  filter: grayscale(1) opacity(0.5); /* Estilo natural e integrado */
+  transition: all var(--transition);
+}
+.marquee-item:hover .marquee-logo-img {
+  filter: grayscale(0) opacity(1); /* Recupera color al pasar el mouse */
+  transform: scale(1.1);
 }
 .marquee-brand {
   font-family: var(--font-display);
   font-size: 1.05rem;
-  font-weight: 600;
+  font-weight: 500;
   color: var(--espresso);
+  opacity: 0.6;
   white-space: nowrap;
-  opacity: 0.75;
-  transition: opacity var(--transition);
+  transition: all var(--transition);
 }
-.marquee-item:hover .marquee-brand { opacity: 1; }
+.marquee-item:hover .marquee-brand { 
+  opacity: 1;
+  color: var(--caramel);
+}
 .marquee-sep {
   color: var(--caramel);
   font-size: 0.8rem;
