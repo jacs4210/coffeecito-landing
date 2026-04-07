@@ -4,16 +4,16 @@
 *Prioridad: crítica. Sin esto, los demás cambios no tienen coherencia.*
 
 ### 1.1 Sistema de diseño base
-- [ ] Definir paleta definitiva: primario, secundario, acento, fondo, texto
-- [ ] Establecer escala tipográfica: heading display / heading / body / caption
-- [ ] Crear variables CSS globales para colores y tipografías
-- [ ] Revisar y estandarizar espaciados entre secciones
+- [x] Definir paleta definitiva: primario, secundario, acento, fondo, texto
+- [x] Establecer escala tipográfica: heading display / heading / body / caption
+- [x] Crear variables CSS globales para colores y tipografías
+- [x] Revisar y estandarizar espaciados entre secciones
 
 ### 1.2 Consistencia visual
-- [ ] Unificar idioma del nav → todo en español o todo consistente
-- [ ] Reemplazar emojis como iconos por SVGs o iconografía coherente
-- [ ] Estandarizar todos los logos de marcas: mismo fondo, mismo tamaño, misma resolución
-- [ ] Definir un sistema de sombras y bordes consistente
+- [x] Unificar idioma del nav → todo en español o todo consistente
+- [x] Reemplazar emojis como iconos por SVGs o iconografía coherente
+- [x] Estandarizar todos los logos de marcas: mismo fondo, mismo tamaño, misma resolución
+- [x] Definir un sistema de sombras y bordes consistente
 
 ---
 

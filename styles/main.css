@@ -1050,3 +1050,23 @@ h1, h2, h3 { font-family: var(--font-display); line-height: 1.15; }
   .stats-grid { grid-template-columns: 1fr 1fr; gap: 1rem; }
   .stat-card { padding: 1.5rem 0.75rem; }
 }
+/* Iconos en formulario */
+.form-icon, .btn-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-secondary);
+  vertical-align: middle;
+}
+.form-check .form-icon { margin-right: 0.25rem; }
+.btn-icon { color: var(--color-accent); transition: transform var(--transition); }
+.btn:hover .btn-icon { transform: rotate(15deg) scale(1.1); }
+
+/* Ajuste éxito formulario */
+.success-icon {
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+  color: var(--color-accent);
+  display: flex;
+  justify-content: center;
+}
