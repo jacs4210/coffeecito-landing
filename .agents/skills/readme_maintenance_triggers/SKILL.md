@@ -1,17 +1,13 @@
 ---
 name: readme_maintenance_triggers
-description: Reglas y disparadores para obligar la actualización continua de la documentación central.
+description: Reglas de oro y disparadores (Triggers) de mantenibilidad obligatoria para preservar la documentación base actualizada a lo largo del tiempo.
 ---
+# Reglas de Mantenimiento del README y Entorno
 
-# Disparadores de Actualización de Documentación (README)
+## Disparadores (Triggers) de Actualización
+A partir de la ejecución de actividades bajo este entorno de trabajo, el Agente LLM tiene tajantemente prohibido silenciar los incrementos significativos o dejar en estado obsoleto de versión al fichero fundamental (El README.md del index de proyecto), debiéndose ejecutar mantenimientos bajo las siguientes condiciones de disolución:
 
-Como agente, posees el mandato explícito de mantener la consistencia de la documentación a la par de la base de código. El archivo `README.md` JAMÁS se ignorará tras una operación transformativa. 
-
-Si el agente realiza alguna de las siguientes alteraciones, está **obligado a insertar de forma correlativa la explicación necesaria en el correspondiente segmento del `README.md`**:
-
-## Disparadores (Triggers) Restrictivos:
-1. **Alteración de Estructura Clave (Scaffolding)**: Si por mandato superior sumas ecosistemas nuevos (un `package.json`, empaquetadores como Vite, linters) o la estructura cambia radicalmente al crear un directorio macro que afecte el funcionamiento primario.
-2. **Nuevos Sistemas de Inicialización**: Si la receta para "Levantar" el software contenida hasta ahora sufre de anexos o requerimientos (Por ejemplo: obligatoriedad de uso de NodeJS `vX.Z.Y`, o adición de Dockerfiles/Docker Compose). La sub-sección de "Desarrollo Local" debe ser enmendada para no estancar futuros usos.
-3. **Dependencias Expositivas**: Siempre que agregues servicios integrados consumidos desde la web como CDNs obligatorios y globales, u APIs rest externas conectadas. 
-
-*Esta habilidad (Skill) representa un compromiso de 'Auto-Sanación' sobre la usabilidad del sistema para operadores humanos.*
+- **Cambio Estructural Mayor:** Si introduces directrices arquitectónicas, subdirectorios base nuevos o carpetas modulares en la vista de JS, requerirán que justifiques para qué sirven su respectiva sección descriptiva en la doc.
+- **Nuevas Convenciones:** Si tu tarea se asume en migrar un segmento de las convenciones Vanilla por algo como abstracciones de `SASS`, PostCSS o incluso se ancla un `npm run start` donde no existía, de manera estricta y perimetral, debes ser quien exponga estos flujos nuevos e instructivos dentro del README.
+- **Integraciones Third-Party:** Al acoplar de forma persistente recursos tipo librerías (Analytics de datos en el Header, implementaciones del layout externo, etc.), deberán describirse y enunciar su alcance.
+- **Despliegues o CDN (Netlify):** Reflejadas mutaciones perennes a la forma en que `netlify.toml` procesa los redireccionamientos o en los perfiles nativos de entorno del CDN.

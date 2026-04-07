@@ -1,18 +1,17 @@
 ---
 name: security_guidelines
-description: Pautas de mitigación de vulnerabilidades adaptadas a Vanilla Frontend.
+description: Directrices de prevención de ataques estáticos frente a cara del usuario (web Vanilla).
 ---
+# Directrices de Seguridad
 
-# Directrices de Seguridad Activa Front-End
+Siendo la representación digital, estática y la interacción expuesta cara a cara del usuario puro en el internet, debe asumir:
 
-Dado que se trata de un ecosistema que vive 100% en el entorno cliente (Navegador) y se exponen públicamente los assets de JavaScript o configuraciones de front_end:
+## Mitigación de XSS (Cross-Site Scripting)
+- Jamás, bajo ningún concepto, el agente puede usar de manera arbitraria o indiscriminada referencias como `innerHTML` para la inyección de atributos que contengan parámetros URL variables, cadenas o retornos no controlados del sistema. Optar ineludiblemente por `textContent` si la alteración se restringe a texto puro o realizar procesos de "sanitization" con alta precaución.
 
-1. **Cero Tolerancia a Secretos Embebidos (Secrets Hardcoding)**: 
-   - Bajo ninguna circunstancia y por ninguna motivación técnica pueden dejarse dentro del código base tokens de API críticos, credenciales de Bases de Datos Directas, o configuraciones propietarias cerradas dentro de `scripts/` o el marcado HTML.
+## Restricción de "Secrets" y Hardcoding
+- **Tolerancia Cero ABSOLUTA al hardcoding.** En una plataforma puramente orientada en estáticos al cliente final, todas las referencias a tokens de APIs privativas institucionales o externas que no cuenten con sistemas de seguridad públicos, llaves de accesos privados o servicios back-office, NUNCA figurarán impresas ni importables desde los scripts `JS`.
+- Para pasarelas de pago livianas o dependencias públicas (ej. `EmailJS` para envíos transaccionales) única y exclusivamente se incrustarán llaves o tokens de origen público certificados, debidamente ocultos bajo protección referencial externa si lo permite.
 
-2. **Mitigación frente a Cross-Site Scripting (XSS)**: 
-   - Precaución extrema al construir o pintar Nodos del DOM desde orígenes dinámicos si la landing se nutre alguna vez de APIs externas.
-   - Evita las funciones inherentemente peligrosas: no utilices `element.innerHTML` sin validación previa y sanitización estricta. Intercambia las operaciones siempre que sea posible por `element.textContent`, `element.setAttribute`, o creación de clústeres mediante `document.createElement()`.
-
-3. **Restricción y Orígenes (Cross-Origin)**:
-   - Toda solicitud de origen (Fetch Call) requerirá un manejo de CORS robusto. Las inyecciones de iframes o la dependencia de librerías en CDN de terceros (`cdnjs`, `jsdelivr`, etc.) siempre deben declarar la firma íntegra de `integrity="sha384-..."` y `crossorigin="anonymous"` dentro del archivo base (`index.html`).
+## Políticas y CSP
+- En caso de configurar la mutación del ecosistema a futuro frente a la plataforma, requerir directitvas (Content Security Policy) fuertes en el despliegue para garantizar que únicamente los orígenes conocidos por el sistema central tendrán el nivel de permiso natural.

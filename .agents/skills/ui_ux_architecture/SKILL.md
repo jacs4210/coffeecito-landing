@@ -1,27 +1,26 @@
 ---
 name: ui_ux_architecture
-description: Lineamientos estéticos y de arquitectura CSS/DOM para el proyecto Vanilla Frontend.
+description: Lineamientos estéticos, jerarquía visual y arquitectura de experiencia en entornos puramente Vanilla de Frontend.
 ---
+# Arquitectura UI/UX y Lineamientos Estéticos
 
-# UI/UX & CSS Architecture Guidelines
+Para compensar la carencia de frameworks prearmados e implementar una experiencia digital excepcional, moderna y escalable directamente desde Vanilla, asume los siguientes pilares de arquitectura:
 
-Como arquitecto de Frontend asumiendo un ecosistema puramente Vanilla (HTML, CSS y JS), debes aplicar estos mandamientos de UI/UX y estandarización visual.
+## Sistema de Tokens CSS
+- Utilizar variables CSS nativas vinculadas en pseudoclase (`:root`) dentro del sistema principal (`styles/` si aplica) dictadas como la única fuente de la verdad para el Design System.
+- Aplicar convenciones de nomenclatura robustas y semánticas, jamás abstractas. E.g., utilizar `--color-primary-dark`, `--color-surface`, `--font-heading`, `--spacing-xs`.
+- Prohibición sistemática del "Hardcoding" generalizado de hexagesimales u opacidades; cada color, dimensión o timing de micro-interacción debe corresponder a un token unificado.
 
-## 1. Sistema de Tokens y Variables CSS
-Todas las dimensiones, espacios, tipografías y colores **deben** estar declarados como Custom Properties (`--variable`) en la pseudoclase `:root`. No se permite la interpolación de colores arbitrarios o *hardcodeados* (los "magic numbers").
-- Usa prefijos si es pertinente: `--sm-spacing-1`, `--color-primary-base`, `--font-main`.
-- Ejemplo de colores existentes definidos en la Landing: `--color-surface-dark`, `--color-primary-dark`.
+## Jerarquía Visual y Layout
+- Establecer un paradigma estricto de desarrollo "Mobile First". Toda alineación e instancia debe funcionar impecablemente en pantallas responsivas. 
+- Usar de preferencia CSS Grid bidimensional para secciones modulares complejas y Flexbox para componentes en distribución simple/unidimensional.
+- Perseguir incansablemente la limpieza visual, el uso agresivo e inteligente del espacio en blanco (`whitespace/gap`), alineamiento absoluto y jerarquía tipográfica para garantizar un aspecto *Premium* al visitante.
 
-## 2. Jerarquía Visual y Responsividad
-- Construye las interfaces usando la estrategia "Mobile-First".
-- Todo esquema de "grilla" debe lograrse con CSS Grid para disposición macro de layouts y Flexbox para componentes de una dimensión o micro-alineaciones.
-- Los "Breakpoints" deben alinearse a convenciones (e.g. tablet `768px`, desktop `1024px`) controlados por media queries y variables de umbral si es posible.
+## Accesibilidad (A11y)
+- Empoderar una semántica rigurosa del árbol de elementos HTML5. Evitar la "Divitis" usando componentes orgánicos estructurales (`<header>`, `<footer>`, `<main>`, `<section>`, `<article>`, `<nav>`, `<aside>`).
+- Cumplimiento de interacciones sin texto: Para componentes, iconografía, o botones visuales mudos, adjuntar incondicionalmente atributos suplementarios `aria-label`.
+- Cada inyección o uso de elemento imagen (`<img>`) asume la obligación de un atributo `alt` claro y descriptivo para lectores.
 
-## 3. Accesibilidad (a11y)
-- Obligatorio validar relación de contraste (WCAG 2.1 AA mínimo).
-- Proveer semántica estricta de HTML5 (uso de etiquetas `<header>`, `<main>`, `<article>`, `<section>`, y `<footer>`).
-- Todos los elementos iterables o botones de CTA requerirán atributos `aria-label` o equivalentes cuando su semántica textual no sea suficientemente descriptiva para los Screen Readers.
-
-## 4. Animaciones y Micro-interacciones
-- En vez de usar JS masivo, prefiere CSS Transitions y Animations para cambios de estado (hover, focus, active).
-- Limita la carga computacional; usa `transform` y `opacity` preferiblemente para que opere la aceleración por hardware de los navegadores modernos y evitar recálculos excesivos en el layout de pintura (Reflow/Repaint).
+## Arquitectura de Microinteracciones
+- Entregar sensación viva o "dinámica" constante en la interfaz de usuario implementando animaciones microscópicas elegantes usando `transition` de CSS o `keyframes`. 
+- Cuidar los estados de los elementos interactivos (`:hover`, `:focus`, `:active`) permitiendo una fluidez moderna sin impactar en las métricas esenciales y técnicas del DOM.

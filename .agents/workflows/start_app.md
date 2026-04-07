@@ -1,24 +1,18 @@
 ---
-description: Levantar la aplicación localmente
+description: Cómo levantar y ejecutar la aplicación localmente
 ---
+# Levantamiento del Entorno Local
 
-# Iniciar la aplicación en el entorno local
+Dado que el ecosistema técnico es Vanilla Frontend (HTML/CSS/JS Estático) sin empaquetadores ni frameworks o bases de Backend instalados, la puesta en marcha local es inmediata y no depende de scripts de Node.js, gestores como Maven, ni contenedores Docker.
 
-Debido a que este repositorio es un proyecto estático web puramente Vanilla Frontend (HTML/CSS/JS), sin un gestor de dependencias explícito (no empaquetadores como Vite o Webpack documentados), para servir y visualizar la aplicación localmente bastará con un servidor web estático liviano.
+Para visualizar el proyecto localmente y poder iterar sobre los componentes, estilos y flujos de usuario de forma correcta:
 
-### Paso a Paso
+1. Idealmente la recomendación principal es usar la extensión **Live Server** si empleas VSCode o un IDE homologado, levantando el entorno directamente para habilitar hot-reloading de los ficheros y resolución de rutas dinámicas.
+2. Alternativamente, y como método estándar desde línea de comandos si Python 3 figura en tu stack de sistema, enciende un servidor local ligero apuntando a la raíz del proyecto ejecutando:
 
-1. Desde la raíz del repositorio, ubica el archivo `index.html`.
-2. Para levantar el servidor localmente, puedes usar Python si está instalado (por defecto en macOS/Linux) u otro servidor HTTP que exponga el directorio de la aplicación:
-   
-   Ejemplo con Python 3:
-   ```bash
-   python3 -m http.server 8000
-   ```
+// turbo
+```bash
+python3 -m http.server 8000
+```
 
-   Ejemplo con Node.js (npx y serve):
-   ```bash
-   npx serve .
-   ```
-
-3. Accede en el navegador a: `http://localhost:8000` (o el puerto respectivo) para visualizar la "Landing Coffeecito".
+3. Navega hacia [http://localhost:8000](http://localhost:8000) en tu navegador para ver la página desplegada con todos los activos estáticos y estilos cargados correspondientes.

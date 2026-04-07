@@ -1,20 +1,17 @@
 ---
 name: ci_cd_pipeline
-description: Ecosistema y reglas de Despliegue CI/CD para el proyecto.
+description: Infraestructura de automatización esperada según el ecosistema Netlify detectado.
 ---
+# CI/CD y Pipeline de Despliegue
 
-# Automatización y Ecosistema de Despliegue
+## Detección del Ecosistema
+Acorde a los artefactos en la raíz, el proveedor de servicio y ecosistema CI/CD configurado para el repositorio es directamente **Netlify**, gestionado a través de su directiva y fichero `netlify.toml`.
 
-De acuerdo al reconocimiento estructural del proyecto, este ecosistema está alojado bajo CI/CD pasivo impulsado externamente por integración Git, presentando la siguiente característica fundamental:
+## Fases y Automatización
+Teniendo en cuenta que no existe el uso de dependencias o compilación/transpilación de Node en el árbol del proyecto, el despliegue obvia las rutinas de subida complejas y asume un publico de estáticos directo ("Publish ."). 
+- **Fase de Build:** Totalmente omitida o nula en su infraestructura inicial. Todo activo en la raíz se envía de forma interpretada de golpe.
+- **Flujos futuros de Prueba:** De existir la necesidad latente de pre-compilaciones, sanitizaciones o subrutinas de Tests a posterioridad, deberán configurarse inyectando herramientas en pre-commit con soporte, de tal forma que no subestimen al árbol maestro de la rama si la integridad no es correcta en su totalidad.
 
-## Pila CI/CD Destinada: Netlify
-
-- **Configuración Detectada**: El pipeline de red está regido nativamente por `netlify.toml`, presente en la raíz del repositorio.
-- El ciclo de despliegue principal es gatillado por pushes sobre la rama activa principal (main/master).
-  
-## Estándares de CI/CD del Repositorio:
-- **Fase de Construcción (Build Phase)**: Al ser un proyecto de Vanilla sin empaquetadores como Webpack ni dependencias NPM complejas, usa publicación directa. En Netlify, el directorio asume el proyecto root (`publish = "."` o similar) sin correr scripts de generación preliminares en caso de no estar estrictamente definidos.
-- **Redirects y Cabeceras (Headers)**: A nivel CI son administradas directamente a través del archivo `netlify.toml` (Ejemplo: reglas de descarga para `/assets/pdf/*` y reescritura hacia `/index.html`).
-
-## Evolución de Tareas en CI
-- Toda mutación tecnológica obligatoria o incursión a transpiladores de código o post-procesadores de CSS en el futuro debe imperativamente reflejarse en las reglas dentro del objeto `[build]` (`command=""`) integrándose limpiamente con la ejecución de Netlify.
+## Exigencias Periféricas
+- Se exige que cualquier cabecera dinámica, personalización de estado HTTP para descarga de PDF's locales o gestión de almacenamiento de descargas se controlen dictatorialmente en `netlify.toml`.
+- Todo tráfico perdido a raíz de refactorizaciones o endpoints que decaigan en `404` se redireccionarán estratégicamente a la raíz index.html o sus vistas subyacentes mientras se establecen rutas de prevención visual para el usuario humano.

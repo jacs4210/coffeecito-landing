@@ -1,17 +1,16 @@
 ---
 name: code_review_rules
-description: Protocolo estricto de Code Review, formateo y mitigación de deuda técnica.
+description: Checklist y estándares inflexibles de Code Review y mantenimiento del control de calidad y memoria.
 ---
+# Code Review y Calidad de Código 
 
-# Code Review Ruleset
+En todas las iteraciones o aportes entregados por el agente de forma automática se mantendrá una estricta rigurosidad basada en el control preventivo y el perfeccionamiento continuo mediante los siguientes criterios obligatorios:
 
-Reglas inquebrantables de validación antes de integrar código:
+## Mitigación de Deuda Técnica y Optimización del DOM
+- **Control de Memoria:** Al momento de agregar manipulaciones al DOM (`Event Listeners`), debe ser de carácter sumamente obligatorio planear la delegación pasiva de eventos para la prevención y eliminación inmutable de "Memory Leaks" en los módulos de renderizado interactivo u objetos fantasmas/huérfanos. Si un nodo es retirado dinámicamente, su escucha debe removerse.
+- **Evitar Acoplamiento Estructural (The CSS Nightmare):** Se prohíbe explícitamente generar cadenas destructivas de selección muy específicas o frágiles dentro de las secuencias modulares o globales, tales como `div > .container > p > span:nth-child(2)`. Siempre que sea posible, utilizar clases utilidad discretas o nombres semánticos planos.
 
-## Limpieza e Integridad de Código
-- **Cero Objetos u Oyentes Huérfanos**: Todo controlador de eventos agregado dinámicamente (`addEventListener`) debe integrarse considerando su destrucción controlada (`removeEventListener`) en caso de manipulación de DOM compleja, evitando Fugas de Memoria (Memory Leaks).
-- **Mitigación de Deuda Técnica**: No introduzcas comentarios muertos del tipo `// código aquí después`. Si hay una omisión temporal, debe rotularse con `TODO: [descripción explícita]`. Si un bloque de código fue reemplazado y es residual, SE DEBE ELIMINAR por completo.
-- **Formateo**: Alineación al estándar configurado. Preferir indentación de 2 espacios. Archivos HTML deben estar limpios con indentación correcta de anidación. Los scripts de JavaScript utilizarán Camel Case para Variables/Funciones.
-
-## Evaluación Estática sobre CSS y HTML:
-- **HTML**: Validar inexistencia total de atributos `id="..."` duplicados dentro de la vista compilada, lo cual arruina la semántica y rompe interactuadores DOM / a11y.
-- **CSS**: Prevención de selectores altamente específicos. Emplear selectores lógicos (clases compuestas) minimizando la profundidad de anidación superior a tres capas limitando a su vez el uso excesivo de `!important` y selectores de bloque por `#id` en favor de estandarización por variables y componentes visuales reutilizables.
+## Limpieza de Código y Consistencia
+- A falta de un formateador de entorno estricto instalado (E.g. Prettier via npm scripts), se impone fuertemente mantener de forma explícita toda indentación heredada natural, erradicando a plenitud `trailing whitespaces`.
+- Las tabulaciones persistirán uniformes bajo indentaciones estrictamente a 2 o 4 celdas dependiendo de la coherencia del documento.
+- Asegurar de forma absoluta la limpieza de clases CSS inutilizadas generadas durante borradores, eliminar cualquier recurso visual (`<img>`, `<video>`, `.svg`) residual que no pertenezca explícitamente al árbol actual de renders HTML.
