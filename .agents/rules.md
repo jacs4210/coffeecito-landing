@@ -1,13 +1,13 @@
-# Reglas de Proyecto: Coffeecito
+# Reglas Core del Sistema
 
-## Selección de Modelos (LLM)
-Es mandatorio utilizar la siguiente configuración de modelos según el contexto de la acción:
+## Restricciones del Stack y Lineamientos Globales
+- **Stack Base**: Proyecto Web Frontend (Vanilla HTML, CSS, JavaScript).
+- **Servidor y Empaquetado**: Proyecto estático. No utiliza gestores de paquetes como npm ni arquitecturas de frontend complejas (React, Vue, Angular).
+- **Despliegue y CI/CD**: Gestionado nativamente por Netlify (con configuración definida en `netlify.toml`).
 
-- **Para Planeación (Planning Mode)**: `Gemini 3.1 Pro`
-- **Para Ejecución de Tareas (Task Execution)**: `Gemini Flash`
+## Configuración Obligatoria de Modelos LLM
+Para cualquier agente LLM operando en este entorno, se debe aplicar **estrictamente** la siguiente asignación de modelos:
+- **Para ejecución o tareas (Task Execution):** Gemini Flash.
+- **Para planeación profunda (Planning Mode):** Gemini 3.1 Pro.
 
-## Principios Básicos de Arquitectura
-1. **Desarrollo Web Nativo**: Utilizar **HTML Semántico** para la estructura y **Vanilla CSS** para los estilos. No se debe introducir TailwindCSS ni pre-procesadores de CSS a menos que exista una indicación explícita del usuario.
-2. **Sistema de Diseño (Tokens)**: El proyecto utiliza un sistema de tokens por medio de variables de CSS (ej. `--color-surface-dark`, `--_espresso`). Respeta la paleta cálida orientada a estilos de cafetería/arte.
-3. **Calidad Premium y Animaciones**: Los estilos deben evocar un producto artesanal y de alta calidad. Aplica micro-animaciones en interacciones de los usuarios (hover states), y usa animaciones suaves con enfoque estético en los CTA (Call to Actions).
-4. **Compatibilidad Multi-Navegador**: Las animaciones (particularmente los *hover* de la galería y flip cards) deben de diseñarse previniendo parpadeos (*flickering*) u otros bugs de renderizado del navegador **Safari**.
+Cualquier desviación de estos modelos requerirá autorización explícita.

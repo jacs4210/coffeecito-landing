@@ -1,23 +1,18 @@
 ---
 name: security_guidelines
-description: Lineamientos de seguridad orientados a prevenir vulnerabilidades en la aplicación estática de Coffeecito.
+description: Pautas de mitigación de vulnerabilidades adaptadas a Vanilla Frontend.
 ---
 
-# Directrices de Seguridad Web
+# Directrices de Seguridad Activa Front-End
 
-Para mantener la integridad y seguridad de `10_landing_coffeecito`, todo código (HTML, CSS y JS puro) debe someterse a las siguientes regulaciones. Al tratarse de una arquitectura estática, las mitigaciones principales se enfocan del lado del cliente (Frontend).
+Dado que se trata de un ecosistema que vive 100% en el entorno cliente (Navegador) y se exponen públicamente los assets de JavaScript o configuraciones de front_end:
 
-## 1. Prevención de Cross-Site Scripting (XSS)
-- **Manipulación Segura del DOM**: Está estrictamente prohibido el uso de métodos como `innerHTML`, `outerHTML` o `document.write` si el contenido proviene de alguna variable interactiva o dinámica. Sustitúyelo siempre por métodos seguros como `textContent`, `innerText`, o manipulación estructurada con `createElement()`.
-- **Validación de Entradas**: Si futuras integraciones incluyen la recepción de strings a través de formularios o parámetros en la URL (Query Params), se debe escapar los caracteres críticos antes de interpretarlos en la UI.
+1. **Cero Tolerancia a Secretos Embebidos (Secrets Hardcoding)**: 
+   - Bajo ninguna circunstancia y por ninguna motivación técnica pueden dejarse dentro del código base tokens de API críticos, credenciales de Bases de Datos Directas, o configuraciones propietarias cerradas dentro de `scripts/` o el marcado HTML.
 
-## 2. Inclusiones de Terceros Seguras
-- **Subresource Integrity (SRI)**: Cualquier librería o componente visual externo importado mediante `<script src="...">` o `<link href="...">` desde un CDN público debe incluir preferentemente los atributos `integrity` y `crossorigin="anonymous"`.
-- Reducir al máximo la inclusión de scripts de terceros innecesarios para prevenir inyecciones a la cadena de suministro en el navegador de los usuarios.
+2. **Mitigación frente a Cross-Site Scripting (XSS)**: 
+   - Precaución extrema al construir o pintar Nodos del DOM desde orígenes dinámicos si la landing se nutre alguna vez de APIs externas.
+   - Evita las funciones inherentemente peligrosas: no utilices `element.innerHTML` sin validación previa y sanitización estricta. Intercambia las operaciones siempre que sea posible por `element.textContent`, `element.setAttribute`, o creación de clústeres mediante `document.createElement()`.
 
-## 3. Seguridad a Nivel de Servidor (Netlify)
-- Las configuraciones críticas de encabezados HTTP como *Content Security Policy* (CSP), *X-Frame-Options* y protección contra MIME-sniffing *X-Content-Type-Options* deben administrarse directamente dentro del archivo `netlify.toml`.
-- Evita forzar en el código redirecciones de protocolo puro. La encriptación (TLS/HTTPS) es manejada automáticamente por el host de Netlify.
-
-## 4. Gestión de Claves Sensibles
-- **Cero Hardcoding**: Ningún token privado, clave de bases de datos o credencial de apis administrativas se debe escribir de forma rígida dentro del directorio `scripts/` o el cuerpo del `index.html`. Dado que el proyecto es puramente estático de cara al cliente, todos los tokens y lógica secreta en el archivo final son visibles al público en el navegador.
+3. **Restricción y Orígenes (Cross-Origin)**:
+   - Toda solicitud de origen (Fetch Call) requerirá un manejo de CORS robusto. Las inyecciones de iframes o la dependencia de librerías en CDN de terceros (`cdnjs`, `jsdelivr`, etc.) siempre deben declarar la firma íntegra de `integrity="sha384-..."` y `crossorigin="anonymous"` dentro del archivo base (`index.html`).
