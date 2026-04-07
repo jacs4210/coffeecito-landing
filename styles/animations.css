@@ -67,12 +67,23 @@
 .tarifas-grid .reveal:nth-child(4) { transition-delay: 0.35s; }
 .tarifas-grid .reveal:nth-child(5) { transition-delay: 0.45s; }
 
-/* ─── HERO ENTRANCE ──────────────────────────── */
-.hero-content.reveal {
-  animation: fadeUp 1s cubic-bezier(.4,0,.2,1) 0.3s both;
-  opacity: 1;
-  transform: none;
+/* ─── HERO ENTRANCE (CASCADE) ────────────────── */
+.hero-content .stagger-1,
+.hero-content .stagger-2,
+.hero-content .stagger-3,
+.hero-content .stagger-4,
+.hero-content .stagger-5,
+.hero-scroll.stagger-6 {
+  opacity: 0;
+  animation: fadeUp 1s cubic-bezier(.4,0,.2,1) forwards;
 }
+
+.hero-content .stagger-1 { animation-delay: 0.15s; }
+.hero-content .stagger-2 { animation-delay: 0.3s; }
+.hero-content .stagger-3 { animation-delay: 0.45s; }
+.hero-content .stagger-4 { animation-delay: 0.6s; }
+.hero-content .stagger-5 { animation-delay: 0.75s; }
+.hero-scroll.stagger-6 { animation-delay: 0.9s; }
 
 /* ─── BUTTON MICRO-ANIMATION ─────────────────── */
 .btn-primary {

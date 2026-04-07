@@ -20,11 +20,11 @@
 ## Fase 2 — Hero y primera impresión
 *Prioridad: alta. Es lo primero que ve una marca.*
 
-- [ ] Incorporar video de fondo o elemento dinámico que reemplace la foto estática
-- [ ] Revisar headline para que tenga más fuerza editorial en 5 palabras o menos
-- [ ] Asegurar que los dos CTAs ("Hablemos" y "Ver contenido") tengan jerarquía visual clara: uno primario, uno secundario
-- [ ] Añadir micro-animación de entrada (fade + slide) para el texto del Hero
-- [ ] Verificar que el Hero ocupe exactamente el 100vh sin desbordamiento
+- [x] Incorporar video de fondo o elemento dinámico que reemplace la foto estática
+- [x] Revisar headline para que tenga más fuerza editorial en 5 palabras o menos
+- [x] Asegurar que los dos CTAs ("Hablemos" y "Ver contenido") tengan jerarquía visual clara: uno primario, uno secundario
+- [x] Añadir micro-animación de entrada (fade + slide) para el texto del Hero
+- [x] Verificar que el Hero ocupe exactamente el 100vh sin desbordamiento
 
 ---
 
