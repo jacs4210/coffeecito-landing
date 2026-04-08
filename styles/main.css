@@ -482,9 +482,9 @@ h1, h2, h3 { font-family: var(--font-display); line-height: 1.15; }
 
 
 /* ═══════════════════════════════════════════════
-   ESTADÍSTICAS
+   COMUNIDAD / BENTO GRID
 ═══════════════════════════════════════════════ */
-.stats-section {
+.comunidad-section {
   position: relative;
   background: var(--color-surface-dark);
   text-align: center;
@@ -497,53 +497,149 @@ h1, h2, h3 { font-family: var(--font-display); line-height: 1.15; }
     radial-gradient(ellipse 60% 80% at 20% 50%, rgba(200,149,108,0.18) 0%, transparent 60%),
     radial-gradient(ellipse 60% 80% at 80% 50%, rgba(232,201,160,0.12) 0%, transparent 60%);
 }
-.stats-section .container { position: relative; z-index: 1; }
-.stats-section .section-label { color: var(--color-accent); opacity: 0.8; }
-.stats-grid {
+.comunidad-section .container { position: relative; z-index: 1; }
+.comunidad-section .section-label { color: var(--color-accent); opacity: 0.8; }
+
+/* Fila 1: Grid de 4 tarjetas */
+.stats-metrics-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 2rem;
-  margin: 3rem 0 1.5rem;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.25rem;
+  margin-top: 3rem;
+  text-align: left;
 }
-.stat-card {
-  padding: 2rem 1rem;
-  border: 1px solid rgba(232,201,160,0.2);
+@media (min-width: 1024px) {
+  .stats-metrics-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.stats-metric-card {
+  padding: 2rem;
+  background: rgba(255,255,255,0.07);
   border-radius: var(--radius-lg);
-  background: rgba(255,255,255,0.04);
-  backdrop-filter: blur(6px);
-  transition: all var(--transition);
+  display: flex;
+  flex-direction: column;
 }
-.stat-card:hover {
-  background: rgba(255,255,255,0.08);
-  transform: translateY(-4px);
-}
-.stat-number {
-  display: block;
+
+.stats-metric-number {
   font-family: var(--font-display);
-  font-size: clamp(2.2rem, 5vw, 3.2rem);
+  font-size: clamp(3rem, 5vw, 4rem);
   font-weight: 700;
-  color: var(--color-accent);
-  margin-bottom: 0.5rem;
+  color: #D4A843;
   line-height: 1;
+  margin-bottom: 0.5rem;
 }
-.stat-label {
-  font-size: var(--text-sm);
-  color: rgba(255,255,255,0.65);
-  font-weight: 400;
+
+.stats-metric-title {
+  font-size: var(--text-base);
+  font-weight: 600;
+  color: var(--color-white);
+  margin-bottom: 0.5rem;
+  line-height: 1.2;
 }
-.stats-note {
+
+.stats-metric-copy {
   font-size: var(--text-sm);
-  color: rgba(255,255,255,0.5);
-  margin-top: 1rem;
+  color: rgba(255,255,255,0.7);
+  line-height: 1.4;
+}
+
+/* Fila 2: Banda de reels */
+.stats-reels-band {
+  margin-top: 2.5rem;
+  background: rgba(0,0,0,0.15);
+  border-radius: var(--radius-lg);
+  padding: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+}
+@media (min-width: 768px) {
+  .stats-reels-band {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.reels-band-text {
+  flex: 1;
+  text-align: left;
+}
+
+.reels-band-label {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: rgba(255,255,255,0.6);
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+.reels-band-desc {
+  font-family: var(--font-display);
+  font-size: var(--text-xl);
+  color: var(--color-white);
+  margin-bottom: 1.5rem;
+  line-height: 1.3;
+}
+
+.reels-band-photos {
+  display: flex;
+  gap: 1rem;
+  flex: 1;
+  justify-content: flex-start;
+}
+@media (min-width: 768px) {
+  .reels-band-photos {
+    justify-content: flex-end;
+  }
+}
+
+.reels-square-photo {
+  width: 140px;
+  height: 140px;
+  border-radius: var(--radius-md);
+  position: relative;
+  box-shadow: var(--shadow-sm);
+  background: rgba(255,255,255,0.1);
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 0.5rem;
+  overflow: hidden;
 }
-/* Ícono de pin en stats-note */
-.stats-note svg {
-  flex-shrink: 0;
-  color: var(--color-secondary);
+
+.reels-placeholder {
+  color: rgba(255,255,255,0.4);
+  font-size: 0.85rem;
+  font-weight: 500;
+  text-align: center;
+  z-index: 0;
+}
+
+.reels-actual-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+.reels-square-badge {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  background: rgba(0,0,0,0.55);
+  color: #FFFFFF;
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 0.3rem 0.75rem;
+  border-radius: 20px;
+  z-index: 2;
 }
 
 

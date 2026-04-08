@@ -20,7 +20,7 @@
 ## Fase 2 — Hero y primera impresión
 *Prioridad: alta. Es lo primero que ve una marca.*
 
-- [x] Incorporar video de fondo o elemento dinámico que reemplace la foto estática
+- [x] Incorporar video de fondo (Queda PENDIENTE cargar archivo de video final, usar placeholder)
 - [x] Revisar headline para que tenga más fuerza editorial en 5 palabras o menos
 - [x] Asegurar que los dos CTAs ("Hablemos" y "Ver contenido") tengan jerarquía visual clara: uno primario, uno secundario
 - [x] Añadir micro-animación de entrada (fade + slide) para el texto del Hero
@@ -32,17 +32,18 @@
 *Prioridad: alta. Es el argumento de venta más fuerte.*
 
 ### 3.1 Rediseño de métricas actuales
-- [ ] Reemplazar contadores animados vulnerables por valores estáticos con diseño
-- [ ] Cambiar métrica de % femenina por volumen real de interacciones (55K)
-- [ ] Añadir visualizaciones de vistas por video como lista secundaria
-- [ ] Asegurar que los números sean el apoyo visual, no el foco principal
+*(PENDIENTE: Subir las fotos definitivas para la banda "Contenido que convierte" `assets/images/reel-preview-1.jpg` y `2.jpg`)*
+- [x] Reemplazar contadores animados vulnerables por valores estáticos con diseño
+- [x] Cambiar métrica de % femenina por volumen real de interacciones (55K)
+- [x] Añadir visualizaciones de vistas por video como lista secundaria
+- [x] Asegurar que los números sean el apoyo visual, no el foco principal
 
-### 3.2 Nueva sección: Perfil de audiencia
-- [ ] Crear sección dedicada entre Métricas y Pautas Publicitarias
-- [ ] Mostrar distribución geográfica: Colombia, México, Chile, Argentina
-- [ ] Mostrar perfil demográfico: 90% mujeres, rango de edad, intereses
-- [ ] Diseñar con tarjetas limpias, sin tablas frías
-- [ ] Redactar el copy orientado a marcas, no a seguidores
+### 3.2 Nueva sección: Perfil de Audiencia
+- [x] Crear sección dedicada entre Métricas y Pautas Publicitarias
+- [x] Mostrar distribución geográfica (incorporada al nuevo estilo de comunidad)
+- [x] Mostrar perfil demográfico enfocado en lifestyle
+- [x] Diseñar con tarjetas limpias tipo Bento Grid
+- [x] Redactar el copy con orientación CRO a marcas
 
 ---
 

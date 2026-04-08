@@ -1,558 +1,703 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Coffeecito · Media Kit — Angelica Correa</title>
-    <meta
-      name="description"
-      content="Portafolio y media kit de Angelica Correa (@coffeecito.ac), creadora de contenido de café, home barista y lifestyle con más de 77K seguidores en Instagram."
-    />
-    <meta property="og:title" content="Coffeecito · Media Kit" />
-    <meta
-      property="og:description"
-      content="Conectar desde lo auténtico... taza a taza. Colabora con @coffeecito.ac."
-    />
-    <meta property="og:image" content="assets/images/hero-bg.png" />
-    <meta property="og:type" content="website" />
 
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" href="assets/images/logo-coffeecito.png" />
-    <link rel="apple-touch-icon" href="assets/images/logo-coffeecito.png" />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Coffeecito · Media Kit — Angelica Correa</title>
+  <meta name="description"
+    content="Portafolio y media kit de Angelica Correa (@coffeecito.ac), creadora de contenido de café, home barista y lifestyle con más de 80K seguidores en Instagram." />
+  <meta property="og:title" content="Coffeecito · Media Kit" />
+  <meta property="og:description" content="Conectar desde lo auténtico... taza a taza. Colabora con @coffeecito.ac." />
+  <meta property="og:image" content="assets/images/hero-bg.png" />
+  <meta property="og:type" content="website" />
 
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:wght@300;400;500;600&display=swap"
-      rel="stylesheet"
-    />
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/images/logo-coffeecito.png" />
+  <link rel="apple-touch-icon" href="assets/images/logo-coffeecito.png" />
 
-    <!-- Styles -->
-    <link rel="stylesheet" href="styles/main.css" />
-    <link rel="stylesheet" href="styles/animations.css" />
-  </head>
-  <body>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:wght@300;400;500;600&display=swap"
+    rel="stylesheet" />
 
-    <!-- ══════════════════════════════════════
+  <!-- Styles -->
+  <link rel="stylesheet" href="styles/main.css" />
+  <link rel="stylesheet" href="styles/animations.css" />
+</head>
+
+<body>
+
+  <!-- ══════════════════════════════════════
          NAVBAR
     ══════════════════════════════════════ -->
-    <nav class="navbar" id="navbar">
-      <div class="nav-inner">
-        <a href="#inicio" class="nav-logo">
-          <img src="assets/images/logo-coffeecito.png" alt="Coffeecito logo" class="nav-logo-img" />
-        </a>
-        <ul class="nav-links">
-          <li><a href="#sobre-mi">Sobre mí</a></li>
-          <li><a href="#estadisticas">Estadísticas</a></li>
-          <li><a href="#marcas">Marcas</a></li>
-          <li><a href="#contenido">Contenido</a></li>
-          <li><a href="#tarifas">Tarifas</a></li>
-          <li><a href="#contacto" class="nav-cta">Colaboremos</a></li>
-        </ul>
-        <button class="nav-toggle" id="navToggle" aria-label="Menú">
-          <span></span><span></span><span></span>
-        </button>
-      </div>
-    </nav>
+  <nav class="navbar" id="navbar">
+    <div class="nav-inner">
+      <a href="#inicio" class="nav-logo">
+        <img src="assets/images/logo-coffeecito.png" alt="Coffeecito logo" class="nav-logo-img" />
+      </a>
+      <ul class="nav-links">
+        <li><a href="#sobre-mi">Sobre mí</a></li>
+        <li><a href="#comunidad">Comunidad</a></li>
+        <li><a href="#marcas">Marcas</a></li>
+        <li><a href="#contenido">Contenido</a></li>
+        <li><a href="#tarifas">Tarifas</a></li>
+        <li><a href="#contacto" class="nav-cta">Colaboremos</a></li>
+      </ul>
+      <button class="nav-toggle" id="navToggle" aria-label="Menú">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
 
-    <!-- ══════════════════════════════════════
+  <!-- ══════════════════════════════════════
          HERO
     ══════════════════════════════════════ -->
-    <section class="hero" id="inicio">
-      <!-- 
+  <section class="hero" id="inicio">
+    <!-- 
         Nota: Este video es un placeholder. Cuando tengas tu video horizontal grabado, 
         reemplaza este src con la ruta de tu archivo (ej: assets/videos/hero.mp4).
         La clase .hero-bg-video usando object-fit se encarga de adaptarlo al formato mobile.
       -->
-      <video class="hero-bg-video" autoplay loop muted playsinline poster="assets/images/hero-bg.png">
-        <!-- <source src="assets/videos/hero.mp4" type="video/mp4" /> -->
-      </video>
-      <div class="hero-overlay" aria-hidden="true"></div>
-      <div class="hero-content">
-        <span class="hero-tag stagger-1">Angelica Correa</span>
-        <h1 class="hero-title stagger-2">
-          El café que<br /><em>nos conecta</em>
-        </h1>
-        <p class="hero-tagline stagger-3">
-          Creadora de Contenido · Home Barista · Lifestyle
-        </p>
-        <p class="hero-handle stagger-4">@coffeecito.ac</p>
-        <div class="hero-actions stagger-5">
-          <a href="#contacto" class="btn btn-primary">Hablemos de colaborar</a>
-          <a href="#contenido" class="btn btn-ghost">Ver mi contenido</a>
-        </div>
+    <video class="hero-bg-video" autoplay loop muted playsinline poster="assets/images/hero-bg.png">
+      <!-- <source src="assets/videos/hero.mp4" type="video/mp4" /> -->
+    </video>
+    <div class="hero-overlay" aria-hidden="true"></div>
+    <div class="hero-content">
+      <span class="hero-tag stagger-1">Angelica Correa</span>
+      <h1 class="hero-title stagger-2">
+        El café que<br /><em>nos conecta</em>
+      </h1>
+      <p class="hero-tagline stagger-3">
+        Creadora de Contenido · Home Barista · Lifestyle
+      </p>
+      <p class="hero-handle stagger-4">@coffeecito.ac</p>
+      <div class="hero-actions stagger-5">
+        <a href="#contacto" class="btn btn-primary">Hablemos de colaborar</a>
+        <a href="#contenido" class="btn btn-ghost">Ver mi contenido</a>
       </div>
-      <a href="#sobre-mi" class="hero-scroll stagger-6" aria-label="Desplazar">
-        <span class="scroll-dot"></span>
-      </a>
-    </section>
+    </div>
+    <a href="#sobre-mi" class="hero-scroll stagger-6" aria-label="Desplazar">
+      <span class="scroll-dot"></span>
+    </a>
+  </section>
 
-    <!-- ══════════════════════════════════════
+  <!-- ══════════════════════════════════════
          SOBRE MÍ
     ══════════════════════════════════════ -->
-    <section class="section sobre-mi" id="sobre-mi">
-      <div class="container">
-        <div class="sobre-grid">
-          <div class="sobre-img-wrap reveal">
-            <img
-              src="assets/images/angie-correa.jpeg"
-              alt="Angelica Correa — @coffeecito.ac"
-              class="sobre-img"
-              loading="lazy"
-            />
-            <div class="sobre-img-badge">+77K seguidores</div>
-          </div>
-          <div class="sobre-text reveal">
-            <span class="section-label">Sobre mí</span>
-            <h2 class="section-title">La barista de casa<br />que te inspira a despertar</h2>
-            <p>
-              Soy Angie, y hace varios años convertí mi amor por el café en una comunidad de
-              personas que quieren vivir la <strong>experiencia del café en casa</strong> de forma
-              auténtica, cálida y sin pretensiones.
-            </p>
-            <p>
-              Creo contenido de <strong>latte art</strong>, recetas de café, reseñas de productos
-              y tutoriales de barismo doméstico que conectan marcas con personas reales.
-            </p>
-            <ul class="sobre-highlights">
-              <li>
-                <span class="highlight-icon" aria-hidden="true">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
-                </span>
-                Producción visual cuidada y estética coherente
-              </li>
-              <li>
-                <span class="highlight-icon" aria-hidden="true">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg>
-                </span>
-                Comunicación auténtica, sin guion, sin filtros
-              </li>
-              <li>
-                <span class="highlight-icon" aria-hidden="true">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-                </span>
-                Audiencia colombiana + latinoamericana y EE.UU.
-              </li>
-            </ul>
-            <div class="sobre-social">
-              <a
-                href="https://instagram.com/coffeecito.ac"
-                target="_blank"
-                rel="noopener"
-                class="social-pill"
-              >
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
-                @coffeecito.ac
-              </a>
-            </div>
+  <section class="section sobre-mi" id="sobre-mi">
+    <div class="container">
+      <div class="sobre-grid">
+        <div class="sobre-img-wrap reveal">
+          <img src="assets/images/angie-correa.jpeg" alt="Angelica Correa — @coffeecito.ac" class="sobre-img"
+            loading="lazy" />
+          <div class="sobre-img-badge">+80K seguidores</div>
+        </div>
+        <div class="sobre-text reveal">
+          <span class="section-label">Sobre mí</span>
+          <h2 class="section-title">La barista de casa<br />que te inspira a despertar</h2>
+          <p>
+            Soy Angie, y hace varios años convertí mi amor por el café en una comunidad de
+            personas que quieren vivir la <strong>experiencia del café en casa</strong> de forma
+            auténtica, cálida y sin pretensiones.
+          </p>
+          <p>
+            Creo contenido de <strong>latte art</strong>, recetas de café, reseñas de productos
+            y tutoriales de barismo doméstico que conectan marcas con personas reales.
+          </p>
+          <ul class="sobre-highlights">
+            <li>
+              <span class="highlight-icon" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M18 8h1a4 4 0 0 1 0 8h-1" />
+                  <path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z" />
+                  <line x1="6" y1="1" x2="6" y2="4" />
+                  <line x1="10" y1="1" x2="10" y2="4" />
+                  <line x1="14" y1="1" x2="14" y2="4" />
+                </svg>
+              </span>
+              Producción visual cuidada y estética coherente
+            </li>
+            <li>
+              <span class="highlight-icon" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z" />
+                  <path d="M19 10v2a7 7 0 0 1-14 0v-2" />
+                  <line x1="12" y1="19" x2="12" y2="23" />
+                  <line x1="8" y1="23" x2="16" y2="23" />
+                </svg>
+              </span>
+              Comunicación auténtica, sin guion, sin filtros
+            </li>
+            <li>
+              <span class="highlight-icon" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                  <circle cx="12" cy="10" r="3" />
+                </svg>
+              </span>
+              Audiencia colombiana + latinoamericana y EE.UU.
+            </li>
+          </ul>
+          <div class="sobre-social">
+            <a href="https://instagram.com/coffeecito.ac" target="_blank" rel="noopener" class="social-pill">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="2" y="2" width="20" height="20" rx="5" />
+                <circle cx="12" cy="12" r="4" />
+                <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
+              </svg>
+              @coffeecito.ac
+            </a>
           </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- ══════════════════════════════════════
-         ESTADÍSTICAS
+  <!-- ══════════════════════════════════════
+         COMUNIDAD
     ══════════════════════════════════════ -->
-    <section class="section stats-section" id="estadisticas">
-      <div class="stats-bg" aria-hidden="true"></div>
-      <div class="container">
-        <span class="section-label light">Mis números</span>
-        <h2 class="section-title light">Una comunidad que<br />se toma en serio el café</h2>
-        <div class="stats-grid">
-          <div class="stat-card reveal">
-            <span class="stat-number" data-target="77000" data-prefix="+" data-suffix="K">0</span>
-            <span class="stat-label">Seguidores en Instagram</span>
+  <section class="section comunidad-section" id="comunidad">
+    <div class="stats-bg" aria-hidden="true"></div>
+    <div class="container">
+      <span class="section-label light">NUESTRA HUELLA</span>
+      <h2 class="section-title light">Una comunidad que vive el café en casa</h2>
+
+      <!-- Fila 1: Grid de 4 tarjetas métricas -->
+      <div class="stats-metrics-grid">
+        <div class="stats-metric-card reveal">
+          <span class="stats-metric-number">90%</span>
+          <h3 class="stats-metric-title">Audiencia femenina</h3>
+          <p class="stats-metric-copy">Apasionadas por el café en casa, entre 25 y 44 años.</p>
+        </div>
+        <div class="stats-metric-card reveal">
+          <span class="stats-metric-number">+80K</span>
+          <h3 class="stats-metric-title">Seguidoras en Instagram</h3>
+          <p class="stats-metric-copy">Comunidad activa en Colombia, México, Chile y Argentina.</p>
+        </div>
+        <div class="stats-metric-card reveal">
+          <span class="stats-metric-number">+274K</span>
+          <h3 class="stats-metric-title">Vistas mensuales</h3>
+          <p class="stats-metric-copy">Alcance orgánico. Sin pauta pagada.</p>
+        </div>
+        <div class="stats-metric-card reveal">
+          <span class="stats-metric-number">+1.9K</span>
+          <h3 class="stats-metric-title">Recetas guardadas</h3>
+          <p class="stats-metric-copy">Para replicarlo en casa.</p>
+        </div>
+      </div>
+
+      <!-- Fila 2: Banda de reels destacados -->
+      <div class="stats-reels-band reveal">
+        <div class="reels-band-text">
+          <span class="reels-band-label">CONTENIDO QUE CONVIERTE</span>
+          <p class="reels-band-desc">Sus videos más virales superan las 700K vistas orgánicas.</p>
+        </div>
+        <div class="reels-band-photos">
+          <div class="reels-square-photo">
+            <span class="reels-placeholder">Tu foto aquí</span>
+            <img src="assets/images/reel-preview-1.jpg" alt="" class="reels-actual-img"
+              onerror="this.style.display='none'">
+            <div class="reels-square-badge">▶ 755K vistas</div>
           </div>
-          <div class="stat-card reveal">
-            <span class="stat-number" data-target="370000" data-prefix="+" data-suffix="K">0</span>
-            <span class="stat-label">Cuentas alcanzadas al mes</span>
-          </div>
-          <div class="stat-card reveal">
-            <span class="stat-number" data-target="622000" data-prefix="" data-suffix="K">0</span>
-            <span class="stat-label">Vistas en el mejor Reel</span>
-          </div>
-          <div class="stat-card reveal">
-            <span class="stat-number" data-target="85" data-prefix="" data-suffix="%">0</span>
-            <span class="stat-label">Audiencia femenina</span>
+          <div class="reels-square-photo">
+            <span class="reels-placeholder">Tu foto aquí</span>
+            <img src="assets/images/reel-preview-2.jpg" alt="" class="reels-actual-img"
+              onerror="this.style.display='none'">
+            <div class="reels-square-badge">▶ 734K vistas</div>
           </div>
         </div>
-        <p class="stats-note">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-          Audiencia principal: Colombia (Bogotá, Cali, Barranquilla, Medellín) · También: EE.UU., México e India
-        </p>
       </div>
-    </section>
 
-    <!-- ══════════════════════════════════════
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════
          MARCAS
     ══════════════════════════════════════ -->
-    <section class="section marcas-section" id="marcas">
-      <div class="container">
-        <span class="section-label">Colaboraciones</span>
-        <h2 class="section-title">Marcas que han confiado<br />en Coffeecito</h2>
-      </div>
-      <div class="marquee-wrapper">
-        <div class="marquee-track" id="marqueeTrack">
-          <!-- Bloque 1 -->
-          <div class="marquee-item"><img src="assets/images/collaborations/monin.png" alt="MONIN" class="marquee-logo-img" /></div>
-          <span class="marquee-sep" aria-hidden="true">✦</span>
-          <div class="marquee-item"><img src="assets/images/collaborations/aromacafetero.png" alt="Aroma Cafetero" class="marquee-logo-img" /></div>
-          <span class="marquee-sep" aria-hidden="true">✦</span>
-          <div class="marquee-item"><img src="assets/images/collaborations/emma.svg" alt="Emma" class="marquee-logo-img" /></div>
-          <span class="marquee-sep" aria-hidden="true">✦</span>
-          <div class="marquee-item"><img src="assets/images/collaborations/miniso.svg" alt="Miniso" class="marquee-logo-img" /></div>
-          <span class="marquee-sep" aria-hidden="true">✦</span>
-          <div class="marquee-item"><img src="assets/images/collaborations/matchamor.png" alt="MatchAmor" class="marquee-logo-img" /></div>
-          <span class="marquee-sep" aria-hidden="true">✦</span>
-          <div class="marquee-item"><img src="assets/images/collaborations/olimpica.png" alt="Olímpica" class="marquee-logo-img" /></div>
-          <span class="marquee-sep" aria-hidden="true">✦</span>
-          <div class="marquee-item"><img src="assets/images/collaborations/cafeinsuasti.png" alt="Café Insuasti" class="marquee-logo-img" /></div>
-          <span class="marquee-sep" aria-hidden="true">✦</span>
-          <div class="marquee-item"><img src="assets/images/collaborations/yoyoso.png" alt="YOYOSO" class="marquee-logo-img" /></div>
-          <span class="marquee-sep" aria-hidden="true">✦</span>
-          <div class="marquee-item"><img src="assets/images/collaborations/estrena.png" alt="Estrena" class="marquee-logo-img" /></div>
-          <span class="marquee-sep" aria-hidden="true">✦</span>
-          <div class="marquee-item"><img src="assets/images/collaborations/muvna.webp" alt="Muvna" class="marquee-logo-img" /></div>
-          <span class="marquee-sep" aria-hidden="true">✦</span>
-          <div class="marquee-item"><img src="assets/images/collaborations/topliving.png" alt="TOPLIVING" class="marquee-logo-img" /></div>
-          <span class="marquee-sep" aria-hidden="true">✦</span>
-          <div class="marquee-item"><img src="assets/images/collaborations/hotbrothers.png" alt="Hot Brothers" class="marquee-logo-img" /></div>
-          <span class="marquee-sep" aria-hidden="true">✦</span>
-          <div class="marquee-item"><img src="assets/images/collaborations/outpeak.png" alt="OutPeak" class="marquee-logo-img" /></div>
-          <span class="marquee-sep" aria-hidden="true">✦</span>
-          <div class="marquee-item"><img src="assets/images/collaborations/homecenter.png" alt="Homecenter" class="marquee-logo-img" /></div>
-          <span class="marquee-sep" aria-hidden="true">✦</span>
-          <div class="marquee-item"><img src="assets/images/collaborations/kruve.webp" alt="KRUVE" class="marquee-logo-img" /></div>
-          <span class="marquee-sep" aria-hidden="true">✦</span>
-          <div class="marquee-item"><img src="assets/images/collaborations/mhw3bomber.webp" alt="MHW-3BOMBER" class="marquee-logo-img" /></div>
-          <span class="marquee-sep" aria-hidden="true">✦</span>
-          <div class="marquee-item"><img src="assets/images/collaborations/normcore.png" alt="NORMCORE" class="marquee-logo-img" /></div>
-          <span class="marquee-sep" aria-hidden="true">✦</span>
+  <section class="section marcas-section" id="marcas">
+    <div class="container">
+      <span class="section-label">Colaboraciones</span>
+      <h2 class="section-title">Marcas que han confiado<br />en Coffeecito</h2>
+    </div>
+    <div class="marquee-wrapper">
+      <div class="marquee-track" id="marqueeTrack">
+        <!-- Bloque 1 -->
+        <div class="marquee-item"><img src="assets/images/collaborations/monin.png" alt="MONIN"
+            class="marquee-logo-img" /></div>
+        <span class="marquee-sep" aria-hidden="true">✦</span>
+        <div class="marquee-item"><img src="assets/images/collaborations/aromacafetero.png" alt="Aroma Cafetero"
+            class="marquee-logo-img" /></div>
+        <span class="marquee-sep" aria-hidden="true">✦</span>
+        <div class="marquee-item"><img src="assets/images/collaborations/emma.svg" alt="Emma"
+            class="marquee-logo-img" /></div>
+        <span class="marquee-sep" aria-hidden="true">✦</span>
+        <div class="marquee-item"><img src="assets/images/collaborations/miniso.svg" alt="Miniso"
+            class="marquee-logo-img" /></div>
+        <span class="marquee-sep" aria-hidden="true">✦</span>
+        <div class="marquee-item"><img src="assets/images/collaborations/matchamor.png" alt="MatchAmor"
+            class="marquee-logo-img" /></div>
+        <span class="marquee-sep" aria-hidden="true">✦</span>
+        <div class="marquee-item"><img src="assets/images/collaborations/olimpica.png" alt="Olímpica"
+            class="marquee-logo-img" /></div>
+        <span class="marquee-sep" aria-hidden="true">✦</span>
+        <div class="marquee-item"><img src="assets/images/collaborations/cafeinsuasti.png" alt="Café Insuasti"
+            class="marquee-logo-img" /></div>
+        <span class="marquee-sep" aria-hidden="true">✦</span>
+        <div class="marquee-item"><img src="assets/images/collaborations/yoyoso.png" alt="YOYOSO"
+            class="marquee-logo-img" /></div>
+        <span class="marquee-sep" aria-hidden="true">✦</span>
+        <div class="marquee-item"><img src="assets/images/collaborations/estrena.png" alt="Estrena"
+            class="marquee-logo-img" /></div>
+        <span class="marquee-sep" aria-hidden="true">✦</span>
+        <div class="marquee-item"><img src="assets/images/collaborations/muvna.webp" alt="Muvna"
+            class="marquee-logo-img" /></div>
+        <span class="marquee-sep" aria-hidden="true">✦</span>
+        <div class="marquee-item"><img src="assets/images/collaborations/topliving.png" alt="TOPLIVING"
+            class="marquee-logo-img" /></div>
+        <span class="marquee-sep" aria-hidden="true">✦</span>
+        <div class="marquee-item"><img src="assets/images/collaborations/hotbrothers.png" alt="Hot Brothers"
+            class="marquee-logo-img" /></div>
+        <span class="marquee-sep" aria-hidden="true">✦</span>
+        <div class="marquee-item"><img src="assets/images/collaborations/outpeak.png" alt="OutPeak"
+            class="marquee-logo-img" /></div>
+        <span class="marquee-sep" aria-hidden="true">✦</span>
+        <div class="marquee-item"><img src="assets/images/collaborations/homecenter.png" alt="Homecenter"
+            class="marquee-logo-img" /></div>
+        <span class="marquee-sep" aria-hidden="true">✦</span>
+        <div class="marquee-item"><img src="assets/images/collaborations/kruve.webp" alt="KRUVE"
+            class="marquee-logo-img" /></div>
+        <span class="marquee-sep" aria-hidden="true">✦</span>
+        <div class="marquee-item"><img src="assets/images/collaborations/mhw3bomber.webp" alt="MHW-3BOMBER"
+            class="marquee-logo-img" /></div>
+        <span class="marquee-sep" aria-hidden="true">✦</span>
+        <div class="marquee-item"><img src="assets/images/collaborations/normcore.png" alt="NORMCORE"
+            class="marquee-logo-img" /></div>
+        <span class="marquee-sep" aria-hidden="true">✦</span>
 
-          <!-- Duplicado para loop continuo -->
-          <div class="marquee-item"><img src="assets/images/collaborations/monin.png" alt="MONIN" class="marquee-logo-img" /></div>
-          <span class="marquee-sep" aria-hidden="true">✦</span>
-          <div class="marquee-item"><img src="assets/images/collaborations/aromacafetero.png" alt="Aroma Cafetero" class="marquee-logo-img" /></div>
-          <span class="marquee-sep" aria-hidden="true">✦</span>
-          <div class="marquee-item"><img src="assets/images/collaborations/emma.svg" alt="Emma" class="marquee-logo-img" /></div>
-          <span class="marquee-sep" aria-hidden="true">✦</span>
-          <div class="marquee-item"><img src="assets/images/collaborations/miniso.svg" alt="Miniso" class="marquee-logo-img" /></div>
-          <span class="marquee-sep" aria-hidden="true">✦</span>
-          <div class="marquee-item"><img src="assets/images/collaborations/matchamor.png" alt="MatchAmor" class="marquee-logo-img" /></div>
-          <span class="marquee-sep" aria-hidden="true">✦</span>
-          <div class="marquee-item"><img src="assets/images/collaborations/olimpica.png" alt="Olímpica" class="marquee-logo-img" /></div>
-          <span class="marquee-sep" aria-hidden="true">✦</span>
-          <div class="marquee-item"><img src="assets/images/collaborations/cafeinsuasti.png" alt="Café Insuasti" class="marquee-logo-img" /></div>
-          <span class="marquee-sep" aria-hidden="true">✦</span>
-          <div class="marquee-item"><img src="assets/images/collaborations/yoyoso.png" alt="YOYOSO" class="marquee-logo-img" /></div>
-          <span class="marquee-sep" aria-hidden="true">✦</span>
-          <div class="marquee-item"><img src="assets/images/collaborations/estrena.png" alt="Estrena" class="marquee-logo-img" /></div>
-          <span class="marquee-sep" aria-hidden="true">✦</span>
-          <div class="marquee-item"><img src="assets/images/collaborations/muvna.webp" alt="Muvna" class="marquee-logo-img" /></div>
-          <span class="marquee-sep" aria-hidden="true">✦</span>
-          <div class="marquee-item"><img src="assets/images/collaborations/topliving.png" alt="TOPLIVING" class="marquee-logo-img" /></div>
-          <span class="marquee-sep" aria-hidden="true">✦</span>
-          <div class="marquee-item"><img src="assets/images/collaborations/hotbrothers.png" alt="Hot Brothers" class="marquee-logo-img" /></div>
-          <span class="marquee-sep" aria-hidden="true">✦</span>
-          <div class="marquee-item"><img src="assets/images/collaborations/outpeak.png" alt="OutPeak" class="marquee-logo-img" /></div>
-          <span class="marquee-sep" aria-hidden="true">✦</span>
-          <div class="marquee-item"><img src="assets/images/collaborations/homecenter.png" alt="Homecenter" class="marquee-logo-img" /></div>
-          <span class="marquee-sep" aria-hidden="true">✦</span>
-          <div class="marquee-item"><img src="assets/images/collaborations/kruve.webp" alt="KRUVE" class="marquee-logo-img" /></div>
-          <span class="marquee-sep" aria-hidden="true">✦</span>
-          <div class="marquee-item"><img src="assets/images/collaborations/mhw3bomber.webp" alt="MHW-3BOMBER" class="marquee-logo-img" /></div>
-          <span class="marquee-sep" aria-hidden="true">✦</span>
-          <div class="marquee-item"><img src="assets/images/collaborations/normcore.png" alt="NORMCORE" class="marquee-logo-img" /></div>
-          <span class="marquee-sep" aria-hidden="true">✦</span>
-        </div>
+        <!-- Duplicado para loop continuo -->
+        <div class="marquee-item"><img src="assets/images/collaborations/monin.png" alt="MONIN"
+            class="marquee-logo-img" /></div>
+        <span class="marquee-sep" aria-hidden="true">✦</span>
+        <div class="marquee-item"><img src="assets/images/collaborations/aromacafetero.png" alt="Aroma Cafetero"
+            class="marquee-logo-img" /></div>
+        <span class="marquee-sep" aria-hidden="true">✦</span>
+        <div class="marquee-item"><img src="assets/images/collaborations/emma.svg" alt="Emma"
+            class="marquee-logo-img" /></div>
+        <span class="marquee-sep" aria-hidden="true">✦</span>
+        <div class="marquee-item"><img src="assets/images/collaborations/miniso.svg" alt="Miniso"
+            class="marquee-logo-img" /></div>
+        <span class="marquee-sep" aria-hidden="true">✦</span>
+        <div class="marquee-item"><img src="assets/images/collaborations/matchamor.png" alt="MatchAmor"
+            class="marquee-logo-img" /></div>
+        <span class="marquee-sep" aria-hidden="true">✦</span>
+        <div class="marquee-item"><img src="assets/images/collaborations/olimpica.png" alt="Olímpica"
+            class="marquee-logo-img" /></div>
+        <span class="marquee-sep" aria-hidden="true">✦</span>
+        <div class="marquee-item"><img src="assets/images/collaborations/cafeinsuasti.png" alt="Café Insuasti"
+            class="marquee-logo-img" /></div>
+        <span class="marquee-sep" aria-hidden="true">✦</span>
+        <div class="marquee-item"><img src="assets/images/collaborations/yoyoso.png" alt="YOYOSO"
+            class="marquee-logo-img" /></div>
+        <span class="marquee-sep" aria-hidden="true">✦</span>
+        <div class="marquee-item"><img src="assets/images/collaborations/estrena.png" alt="Estrena"
+            class="marquee-logo-img" /></div>
+        <span class="marquee-sep" aria-hidden="true">✦</span>
+        <div class="marquee-item"><img src="assets/images/collaborations/muvna.webp" alt="Muvna"
+            class="marquee-logo-img" /></div>
+        <span class="marquee-sep" aria-hidden="true">✦</span>
+        <div class="marquee-item"><img src="assets/images/collaborations/topliving.png" alt="TOPLIVING"
+            class="marquee-logo-img" /></div>
+        <span class="marquee-sep" aria-hidden="true">✦</span>
+        <div class="marquee-item"><img src="assets/images/collaborations/hotbrothers.png" alt="Hot Brothers"
+            class="marquee-logo-img" /></div>
+        <span class="marquee-sep" aria-hidden="true">✦</span>
+        <div class="marquee-item"><img src="assets/images/collaborations/outpeak.png" alt="OutPeak"
+            class="marquee-logo-img" /></div>
+        <span class="marquee-sep" aria-hidden="true">✦</span>
+        <div class="marquee-item"><img src="assets/images/collaborations/homecenter.png" alt="Homecenter"
+            class="marquee-logo-img" /></div>
+        <span class="marquee-sep" aria-hidden="true">✦</span>
+        <div class="marquee-item"><img src="assets/images/collaborations/kruve.webp" alt="KRUVE"
+            class="marquee-logo-img" /></div>
+        <span class="marquee-sep" aria-hidden="true">✦</span>
+        <div class="marquee-item"><img src="assets/images/collaborations/mhw3bomber.webp" alt="MHW-3BOMBER"
+            class="marquee-logo-img" /></div>
+        <span class="marquee-sep" aria-hidden="true">✦</span>
+        <div class="marquee-item"><img src="assets/images/collaborations/normcore.png" alt="NORMCORE"
+            class="marquee-logo-img" /></div>
+        <span class="marquee-sep" aria-hidden="true">✦</span>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- ══════════════════════════════════════
+  <!-- ══════════════════════════════════════
          CONTENIDO
     ══════════════════════════════════════ -->
-    <section class="section contenido-section" id="contenido">
-      <div class="container">
-        <span class="section-label">Rendimiento</span>
-        <h2 class="section-title">Contenido que conecta<br />y genera resultados</h2>
-        <div class="reels-grid">
+  <section class="section contenido-section" id="contenido">
+    <div class="container">
+      <span class="section-label">Rendimiento</span>
+      <h2 class="section-title">Contenido que conecta<br />y genera resultados</h2>
+      <div class="reels-grid">
 
-          <a class="reel-card reveal" href="https://www.instagram.com/reel/DLf7w2nhbEn/" target="_blank" rel="noopener" aria-label="Ver Reel en Instagram — 622K vistas">
-            <div class="reel-thumb" style="background-image: url('https://images.unsplash.com/photo-1497935586351-b67a49e012bf?auto=format&fit=crop&q=80&w=640')">
-              <div class="reel-play-btn" aria-hidden="true">
-                <svg width="28" height="28" viewBox="0 0 24 24" fill="white"><path d="M8 5v14l11-7z"/></svg>
-              </div>
-              <div class="reel-ig-badge" aria-hidden="true">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="white"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4" fill="none" stroke="white" stroke-width="1.5"/><circle cx="17.5" cy="6.5" r="1" fill="white"/></svg>
-                Instagram
-              </div>
+        <a class="reel-card reveal" href="https://www.instagram.com/reel/DLf7w2nhbEn/" target="_blank" rel="noopener"
+          aria-label="Ver Reel en Instagram — 622K vistas">
+          <div class="reel-thumb"
+            style="background-image: url('https://images.unsplash.com/photo-1497935586351-b67a49e012bf?auto=format&fit=crop&q=80&w=640')">
+            <div class="reel-play-btn" aria-hidden="true">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="white">
+                <path d="M8 5v14l11-7z" />
+              </svg>
             </div>
-            <div class="reel-stat">
-              <span class="reel-views"><strong>622K</strong> vistas</span>
-              <span class="reel-cta">Ver en Instagram →</span>
+            <div class="reel-ig-badge" aria-hidden="true">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="white">
+                <rect x="2" y="2" width="20" height="20" rx="5" />
+                <circle cx="12" cy="12" r="4" fill="none" stroke="white" stroke-width="1.5" />
+                <circle cx="17.5" cy="6.5" r="1" fill="white" />
+              </svg>
+              Instagram
             </div>
-          </a>
+          </div>
+          <div class="reel-stat">
+            <span class="reel-views"><strong>622K</strong> vistas</span>
+            <span class="reel-cta">Ver en Instagram →</span>
+          </div>
+        </a>
 
-          <a class="reel-card reveal" href="https://www.instagram.com/reel/DTc8GaLDfON/" target="_blank" rel="noopener" aria-label="Ver Reel en Instagram — 341K vistas">
-            <div class="reel-thumb" style="background-image: url('https://images.unsplash.com/photo-1511920170033-f8396924c348?auto=format&fit=crop&q=80&w=640')">
-              <div class="reel-play-btn" aria-hidden="true">
-                <svg width="28" height="28" viewBox="0 0 24 24" fill="white"><path d="M8 5v14l11-7z"/></svg>
-              </div>
-              <div class="reel-ig-badge" aria-hidden="true">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="white"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4" fill="none" stroke="white" stroke-width="1.5"/><circle cx="17.5" cy="6.5" r="1" fill="white"/></svg>
-                Instagram
-              </div>
+        <a class="reel-card reveal" href="https://www.instagram.com/reel/DTc8GaLDfON/" target="_blank" rel="noopener"
+          aria-label="Ver Reel en Instagram — 341K vistas">
+          <div class="reel-thumb"
+            style="background-image: url('https://images.unsplash.com/photo-1511920170033-f8396924c348?auto=format&fit=crop&q=80&w=640')">
+            <div class="reel-play-btn" aria-hidden="true">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="white">
+                <path d="M8 5v14l11-7z" />
+              </svg>
             </div>
-            <div class="reel-stat">
-              <span class="reel-views"><strong>341K</strong> vistas</span>
-              <span class="reel-cta">Ver en Instagram →</span>
+            <div class="reel-ig-badge" aria-hidden="true">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="white">
+                <rect x="2" y="2" width="20" height="20" rx="5" />
+                <circle cx="12" cy="12" r="4" fill="none" stroke="white" stroke-width="1.5" />
+                <circle cx="17.5" cy="6.5" r="1" fill="white" />
+              </svg>
+              Instagram
             </div>
-          </a>
+          </div>
+          <div class="reel-stat">
+            <span class="reel-views"><strong>341K</strong> vistas</span>
+            <span class="reel-cta">Ver en Instagram →</span>
+          </div>
+        </a>
 
-          <a class="reel-card reveal" href="https://www.instagram.com/reel/DT2wDeBkXPX/" target="_blank" rel="noopener" aria-label="Ver Reel en Instagram — 250K vistas">
-            <div class="reel-thumb" style="background-image: url('https://images.unsplash.com/photo-1442512595331-e89e73853f31?auto=format&fit=crop&q=80&w=640')">
-              <div class="reel-play-btn" aria-hidden="true">
-                <svg width="28" height="28" viewBox="0 0 24 24" fill="white"><path d="M8 5v14l11-7z"/></svg>
-              </div>
-              <div class="reel-ig-badge" aria-hidden="true">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="white"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4" fill="none" stroke="white" stroke-width="1.5"/><circle cx="17.5" cy="6.5" r="1" fill="white"/></svg>
-                Instagram
-              </div>
+        <a class="reel-card reveal" href="https://www.instagram.com/reel/DT2wDeBkXPX/" target="_blank" rel="noopener"
+          aria-label="Ver Reel en Instagram — 250K vistas">
+          <div class="reel-thumb"
+            style="background-image: url('https://images.unsplash.com/photo-1442512595331-e89e73853f31?auto=format&fit=crop&q=80&w=640')">
+            <div class="reel-play-btn" aria-hidden="true">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="white">
+                <path d="M8 5v14l11-7z" />
+              </svg>
             </div>
-            <div class="reel-stat">
-              <span class="reel-views"><strong>250K</strong> vistas</span>
-              <span class="reel-cta">Ver en Instagram →</span>
+            <div class="reel-ig-badge" aria-hidden="true">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="white">
+                <rect x="2" y="2" width="20" height="20" rx="5" />
+                <circle cx="12" cy="12" r="4" fill="none" stroke="white" stroke-width="1.5" />
+                <circle cx="17.5" cy="6.5" r="1" fill="white" />
+              </svg>
+              Instagram
             </div>
-          </a>
+          </div>
+          <div class="reel-stat">
+            <span class="reel-views"><strong>250K</strong> vistas</span>
+            <span class="reel-cta">Ver en Instagram →</span>
+          </div>
+        </a>
 
-        </div>
-    </section>
+      </div>
+  </section>
 
-    <!-- ══════════════════════════════════════
+  <!-- ══════════════════════════════════════
          TARIFAS
     ══════════════════════════════════════ -->
-    <section class="section tarifas-section" id="tarifas">
-      <div class="container">
-        <span class="section-label">Formatos</span>
-        <h2 class="section-title">¿Qué podemos crear<br />juntos?</h2>
-        <div class="tarifas-grid">
+  <section class="section tarifas-section" id="tarifas">
+    <div class="container">
+      <span class="section-label">Formatos</span>
+      <h2 class="section-title">¿Qué podemos crear<br />juntos?</h2>
+      <div class="tarifas-grid">
 
-          <div class="tarifa-card reveal">
-            <div class="tarifa-icon" aria-hidden="true">
-              <!-- Ícono: cámara de video -->
-              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2"/></svg>
-            </div>
-            <h3 class="tarifa-nombre">Reel (hasta 60s)</h3>
-            <p class="tarifa-precio">$850.000 <span>COP</span></p>
-            <ul class="tarifa-incluye">
-              <li>Guion y producción visual</li>
-              <li>Edición profesional</li>
-              <li>1 ronda de revisión</li>
-            </ul>
-            <a href="#contacto" class="btn btn-tarifa">Me interesa</a>
+        <div class="tarifa-card reveal">
+          <div class="tarifa-icon" aria-hidden="true">
+            <!-- Ícono: cámara de video -->
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+              stroke-linecap="round" stroke-linejoin="round">
+              <polygon points="23 7 16 12 23 17 23 7" />
+              <rect x="1" y="5" width="15" height="14" rx="2" />
+            </svg>
           </div>
-
-          <div class="tarifa-card popular reveal">
-            <div class="tarifa-badge">
-              <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-              Más solicitado
-            </div>
-            <div class="tarifa-icon" aria-hidden="true">
-              <!-- Ícono: smartphone -->
-              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
-            </div>
-            <h3 class="tarifa-nombre">Post/Reel + Historia</h3>
-            <p class="tarifa-precio">$1.000.000 <span>COP</span></p>
-            <ul class="tarifa-incluye">
-              <li>Reel hasta 60s</li>
-              <li>Historia de apoyo</li>
-              <li>Mayor alcance garantizado</li>
-            </ul>
-            <a href="#contacto" class="btn btn-tarifa">Me interesa</a>
-          </div>
-
-          <div class="tarifa-card reveal">
-            <div class="tarifa-icon" aria-hidden="true">
-              <!-- Ícono: imagen/historia -->
-              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
-            </div>
-            <h3 class="tarifa-nombre">Historia individual</h3>
-            <p class="tarifa-precio">$200.000 <span>COP</span></p>
-            <ul class="tarifa-incluye">
-              <li>Historia de 15s</li>
-              <li>Link en sticker</li>
-              <li>Entrega en 48h</li>
-            </ul>
-            <a href="#contacto" class="btn btn-tarifa">Me interesa</a>
-          </div>
-
-          <div class="tarifa-card reveal">
-            <div class="tarifa-icon" aria-hidden="true">
-              <!-- Ícono: capas/pack -->
-              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
-            </div>
-            <h3 class="tarifa-nombre">Pack 3 Historias</h3>
-            <p class="tarifa-precio">$450.000 <span>COP</span></p>
-            <ul class="tarifa-incluye">
-              <li>3 historias secuenciales</li>
-              <li>Narrativa cohesiva</li>
-              <li>Links en stickers</li>
-            </ul>
-            <a href="#contacto" class="btn btn-tarifa">Me interesa</a>
-          </div>
-
-          <div class="tarifa-card campaña reveal">
-            <div class="tarifa-icon" aria-hidden="true">
-              <!-- Ícono: cohete / campaña -->
-              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/><path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"/><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"/><path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"/></svg>
-            </div>
-            <h3 class="tarifa-nombre">Campaña 12 Reels</h3>
-            <p class="tarifa-precio">$8.600.000 <span>COP</span></p>
-            <ul class="tarifa-incluye">
-              <li>Estrategia de contenido completa</li>
-              <li>12 reels mensuales</li>
-              <li>Reportes de métricas</li>
-              <li>Precio por unidad: $717k</li>
-            </ul>
-            <a href="#contacto" class="btn btn-primary">Hablemos</a>
-          </div>
-
+          <h3 class="tarifa-nombre">Reel (hasta 60s)</h3>
+          <p class="tarifa-precio">$850.000 <span>COP</span></p>
+          <ul class="tarifa-incluye">
+            <li>Guion y producción visual</li>
+            <li>Edición profesional</li>
+            <li>1 ronda de revisión</li>
+          </ul>
+          <a href="#contacto" class="btn btn-tarifa">Me interesa</a>
         </div>
-      </div>
-    </section>
 
-    <!-- ══════════════════════════════════════
+        <div class="tarifa-card popular reveal">
+          <div class="tarifa-badge">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+            </svg>
+            Más solicitado
+          </div>
+          <div class="tarifa-icon" aria-hidden="true">
+            <!-- Ícono: smartphone -->
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+              stroke-linecap="round" stroke-linejoin="round">
+              <rect x="5" y="2" width="14" height="20" rx="2" />
+              <line x1="12" y1="18" x2="12.01" y2="18" />
+            </svg>
+          </div>
+          <h3 class="tarifa-nombre">Post/Reel + Historia</h3>
+          <p class="tarifa-precio">$1.000.000 <span>COP</span></p>
+          <ul class="tarifa-incluye">
+            <li>Reel hasta 60s</li>
+            <li>Historia de apoyo</li>
+            <li>Mayor alcance garantizado</li>
+          </ul>
+          <a href="#contacto" class="btn btn-tarifa">Me interesa</a>
+        </div>
+
+        <div class="tarifa-card reveal">
+          <div class="tarifa-icon" aria-hidden="true">
+            <!-- Ícono: imagen/historia -->
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+              stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="3" width="18" height="18" rx="2" />
+              <circle cx="8.5" cy="8.5" r="1.5" />
+              <polyline points="21 15 16 10 5 21" />
+            </svg>
+          </div>
+          <h3 class="tarifa-nombre">Historia individual</h3>
+          <p class="tarifa-precio">$200.000 <span>COP</span></p>
+          <ul class="tarifa-incluye">
+            <li>Historia de 15s</li>
+            <li>Link en sticker</li>
+            <li>Entrega en 48h</li>
+          </ul>
+          <a href="#contacto" class="btn btn-tarifa">Me interesa</a>
+        </div>
+
+        <div class="tarifa-card reveal">
+          <div class="tarifa-icon" aria-hidden="true">
+            <!-- Ícono: capas/pack -->
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+              stroke-linecap="round" stroke-linejoin="round">
+              <polygon points="12 2 2 7 12 12 22 7 12 2" />
+              <polyline points="2 17 12 22 22 17" />
+              <polyline points="2 12 12 17 22 12" />
+            </svg>
+          </div>
+          <h3 class="tarifa-nombre">Pack 3 Historias</h3>
+          <p class="tarifa-precio">$450.000 <span>COP</span></p>
+          <ul class="tarifa-incluye">
+            <li>3 historias secuenciales</li>
+            <li>Narrativa cohesiva</li>
+            <li>Links en stickers</li>
+          </ul>
+          <a href="#contacto" class="btn btn-tarifa">Me interesa</a>
+        </div>
+
+        <div class="tarifa-card campaña reveal">
+          <div class="tarifa-icon" aria-hidden="true">
+            <!-- Ícono: cohete / campaña -->
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z" />
+              <path
+                d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z" />
+              <path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0" />
+              <path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5" />
+            </svg>
+          </div>
+          <h3 class="tarifa-nombre">Campaña 12 Reels</h3>
+          <p class="tarifa-precio">$8.600.000 <span>COP</span></p>
+          <ul class="tarifa-incluye">
+            <li>Estrategia de contenido completa</li>
+            <li>12 reels mensuales</li>
+            <li>Reportes de métricas</li>
+            <li>Precio por unidad: $717k</li>
+          </ul>
+          <a href="#contacto" class="btn btn-primary">Hablemos</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════
          FORMULARIO DE CONTACTO
     ══════════════════════════════════════ -->
-    <section class="section contacto-section" id="contacto">
-      <div class="container">
-        <div class="contacto-grid">
-          <div class="contacto-info reveal">
-            <span class="section-label light">Contacto</span>
-            <h2 class="section-title light">¿Tienes una marca<br />que huele a café?</h2>
-            <p class="contacto-desc">
-              Cuéntame sobre tu marca y lo que tienes en mente. Te respondo en menos de 24 horas
-              y, si quieres, te envío el media kit completo directamente a tu correo.
-            </p>
-            <div class="contacto-links">
-              <a
-                href="https://instagram.com/coffeecito.ac"
-                target="_blank"
-                rel="noopener"
-                class="contacto-link"
-              >
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
-                @coffeecito.ac
-              </a>
-              <a
-                href="https://wa.me/573104226253?text=Hola%20Angie!%20Vi%20tu%20portafolio%20y%20me%20interesa%20colaborar%20%E2%98%95"
-                target="_blank"
-                rel="noopener"
-                class="contacto-link"
-              >
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
-                WhatsApp
-              </a>
-            </div>
+  <section class="section contacto-section" id="contacto">
+    <div class="container">
+      <div class="contacto-grid">
+        <div class="contacto-info reveal">
+          <span class="section-label light">Contacto</span>
+          <h2 class="section-title light">¿Tienes una marca<br />que huele a café?</h2>
+          <p class="contacto-desc">
+            Cuéntame sobre tu marca y lo que tienes en mente. Te respondo en menos de 24 horas
+            y, si quieres, te envío el media kit completo directamente a tu correo.
+          </p>
+          <div class="contacto-links">
+            <a href="https://instagram.com/coffeecito.ac" target="_blank" rel="noopener" class="contacto-link">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="2" y="2" width="20" height="20" rx="5" />
+                <circle cx="12" cy="12" r="4" />
+                <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
+              </svg>
+              @coffeecito.ac
+            </a>
+            <a href="https://wa.me/573104226253?text=Hola%20Angie!%20Vi%20tu%20portafolio%20y%20me%20interesa%20colaborar%20%E2%98%95"
+              target="_blank" rel="noopener" class="contacto-link">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path
+                  d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" />
+              </svg>
+              WhatsApp
+            </a>
           </div>
+        </div>
 
-          <div class="contacto-form-wrap reveal">
-            <form class="contacto-form" id="contactoForm" novalidate>
-              <div class="form-row">
-                <div class="form-group">
-                  <label for="nombre">Nombre *</label>
-                  <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required autocomplete="name" />
-                </div>
-                <div class="form-group">
-                  <label for="empresa">Marca / Empresa *</label>
-                  <input type="text" id="empresa" name="empresa" placeholder="Nombre de tu marca" required autocomplete="organization" />
-                </div>
+        <div class="contacto-form-wrap reveal">
+          <form class="contacto-form" id="contactoForm" novalidate>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="nombre">Nombre *</label>
+                <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required autocomplete="name" />
               </div>
               <div class="form-group">
-                <label for="email">Correo electrónico *</label>
-                <input type="email" id="email" name="email" placeholder="tu@correo.com" required autocomplete="email" />
+                <label for="empresa">Marca / Empresa *</label>
+                <input type="text" id="empresa" name="empresa" placeholder="Nombre de tu marca" required
+                  autocomplete="organization" />
               </div>
-              <div class="form-group">
-                <label for="formato">Formato de interés</label>
-                <select id="formato" name="formato">
-                  <option value="">Selecciona un formato...</option>
-                  <option value="reel">Reel (hasta 60s) — $850.000 COP</option>
-                  <option value="reel-historia">Post/Reel + Historia — $1.000.000 COP</option>
-                  <option value="historia">Historia individual — $200.000 COP</option>
-                  <option value="pack-historias">Pack 3 Historias — $450.000 COP</option>
-                  <option value="campana">Campaña 12 Reels — $8.600.000 COP</option>
-                  <option value="otro">Otro / Conversemos</option>
-                </select>
-              </div>
-              <div class="form-group">
-                <label for="mensaje">Mensaje *</label>
-                <textarea id="mensaje" name="mensaje" rows="4" placeholder="Cuéntame sobre tu marca y qué tienes en mente..." required></textarea>
-              </div>
-              <div class="form-check">
-                <input type="checkbox" id="enviarPdf" name="enviarPdf" checked />
-                <label for="enviarPdf">
-                  <span class="form-icon" aria-hidden="true">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m21.44 11.05-9.19 9.19a6 6 0 0 1-8.49-8.49l8.57-8.57A4 4 0 1 1 18 8.84l-8.59 8.57a2 2 0 0 1-2.83-2.83l8.49-8.48"/></svg>
-                  </span>
-                  Quiero recibir el <strong>media kit completo</strong> en mi correo
-                </label>
-              </div>
-              <button type="submit" class="btn btn-primary btn-full" id="submitBtn">
-                <span id="btnText">Enviar mensaje</span>
-                <span class="btn-icon" aria-hidden="true">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
-                </span>
-                <span id="btnLoading" hidden>Enviando...</span>
-              </button>
-              <p class="form-disclaimer">
-                Tu información es 100% privada. Solo se usa para responderte.
-              </p>
-            </form>
-            <div class="form-success" id="formSuccess" hidden>
-              <div class="success-icon">
-                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
-              </div>
-              <h3>¡Mensaje recibido!</h3>
-              <p>
-                Te respondo en menos de 24 horas. Si pediste el media kit, ya está en camino a tu
-                correo.
-              </p>
             </div>
+            <div class="form-group">
+              <label for="email">Correo electrónico *</label>
+              <input type="email" id="email" name="email" placeholder="tu@correo.com" required autocomplete="email" />
+            </div>
+            <div class="form-group">
+              <label for="formato">Formato de interés</label>
+              <select id="formato" name="formato">
+                <option value="">Selecciona un formato...</option>
+                <option value="reel">Reel (hasta 60s) — $850.000 COP</option>
+                <option value="reel-historia">Post/Reel + Historia — $1.000.000 COP</option>
+                <option value="historia">Historia individual — $200.000 COP</option>
+                <option value="pack-historias">Pack 3 Historias — $450.000 COP</option>
+                <option value="campana">Campaña 12 Reels — $8.600.000 COP</option>
+                <option value="otro">Otro / Conversemos</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="mensaje">Mensaje *</label>
+              <textarea id="mensaje" name="mensaje" rows="4"
+                placeholder="Cuéntame sobre tu marca y qué tienes en mente..." required></textarea>
+            </div>
+            <div class="form-check">
+              <input type="checkbox" id="enviarPdf" name="enviarPdf" checked />
+              <label for="enviarPdf">
+                <span class="form-icon" aria-hidden="true">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path
+                      d="m21.44 11.05-9.19 9.19a6 6 0 0 1-8.49-8.49l8.57-8.57A4 4 0 1 1 18 8.84l-8.59 8.57a2 2 0 0 1-2.83-2.83l8.49-8.48" />
+                  </svg>
+                </span>
+                Quiero recibir el <strong>media kit completo</strong> en mi correo
+              </label>
+            </div>
+            <button type="submit" class="btn btn-primary btn-full" id="submitBtn">
+              <span id="btnText">Enviar mensaje</span>
+              <span class="btn-icon" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M18 8h1a4 4 0 0 1 0 8h-1" />
+                  <path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z" />
+                  <line x1="6" y1="1" x2="6" y2="4" />
+                  <line x1="10" y1="1" x2="10" y2="4" />
+                  <line x1="14" y1="1" x2="14" y2="4" />
+                </svg>
+              </span>
+              <span id="btnLoading" hidden>Enviando...</span>
+            </button>
+            <p class="form-disclaimer">
+              Tu información es 100% privada. Solo se usa para responderte.
+            </p>
+          </form>
+          <div class="form-success" id="formSuccess" hidden>
+            <div class="success-icon">
+              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M18 8h1a4 4 0 0 1 0 8h-1" />
+                <path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z" />
+                <line x1="6" y1="1" x2="6" y2="4" />
+                <line x1="10" y1="1" x2="10" y2="4" />
+                <line x1="14" y1="1" x2="14" y2="4" />
+              </svg>
+            </div>
+            <h3>¡Mensaje recibido!</h3>
+            <p>
+              Te respondo en menos de 24 horas. Si pediste el media kit, ya está en camino a tu
+              correo.
+            </p>
           </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- ══════════════════════════════════════
+  <!-- ══════════════════════════════════════
          FOOTER
     ══════════════════════════════════════ -->
-    <footer class="footer">
-      <div class="container">
-        <div class="footer-inner">
-          <div class="footer-brand">
-            <a href="#inicio" class="footer-logo-link">
-              <img src="assets/images/logo-coffeecito.png" alt="Coffeecito" class="footer-logo-img" />
-            </a>
-            <p class="footer-tagline">Conectar desde lo auténtico… taza a taza</p>
-          </div>
-          <div class="footer-links">
-            <a href="https://instagram.com/coffeecito.ac" target="_blank" rel="noopener" aria-label="Instagram">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
-            </a>
-            <a href="https://wa.me/573104226253?text=Hola%20Angie!%20Vi%20tu%20portafolio%20%E2%98%95" target="_blank" rel="noopener" aria-label="WhatsApp">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
-            </a>
-          </div>
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <a href="#inicio" class="footer-logo-link">
+            <img src="assets/images/logo-coffeecito.png" alt="Coffeecito" class="footer-logo-img" />
+          </a>
+          <p class="footer-tagline">Conectar desde lo auténtico… taza a taza</p>
         </div>
-        <div class="footer-bottom">
-          <p>© 2026 Coffeecito · Angelica Correa · Todos los derechos reservados</p>
+        <div class="footer-links">
+          <a href="https://instagram.com/coffeecito.ac" target="_blank" rel="noopener" aria-label="Instagram">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+              <rect x="2" y="2" width="20" height="20" rx="5" />
+              <circle cx="12" cy="12" r="4" />
+              <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
+            </svg>
+          </a>
+          <a href="https://wa.me/573104226253?text=Hola%20Angie!%20Vi%20tu%20portafolio%20%E2%98%95" target="_blank"
+            rel="noopener" aria-label="WhatsApp">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+              <path
+                d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" />
+            </svg>
+          </a>
         </div>
       </div>
-    </footer>
+      <div class="footer-bottom">
+        <p>© 2026 Coffeecito · Angelica Correa · Todos los derechos reservados</p>
+      </div>
+    </div>
+  </footer>
 
-    <!-- Scripts -->
-    <script src="scripts/main.js"></script>
-    <script src="scripts/emailjs.js"></script>
-  </body>
+  <!-- Scripts -->
+  <script src="scripts/main.js"></script>
+  <script src="scripts/emailjs.js"></script>
+</body>
+
 </html>
