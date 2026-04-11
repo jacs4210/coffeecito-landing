@@ -50,16 +50,16 @@
 ## Fase 4 — Sección de marcas
 *Prioridad: alta. Primera señal de credibilidad.*
 
-- [ ] Eliminar banner de scroll infinito actual
-- [ ] Implementar carrusel animado con auto-scroll suave
-- [ ] Añadir efecto hover en cada logo: escala + sombra + brillo
-- [ ] Añadir CTA "Ver todas las marcas" debajo del carrusel
-- [ ] Construir modal/overlay con grid responsivo:
+- [x] Eliminar banner de scroll infinito actual (filtrado al Top 9)
+- [x] Implementar carrusel continuo simplificado y elegante
+- [x] Añadir efecto hover en cada logo: escala + sombra + brillo
+- [x] Añadir CTA "Ver todas las marcas" debajo del carrusel con estilo outline
+- [x] Construir modal/overlay con grid responsivo y todas las 17 marcas:
   - Desktop: 4 columnas
   - Tablet: 3 columnas
   - Mobile: 2 columnas
-- [ ] Animación de entrada del modal: fade + scale in
-- [ ] Botón de cierre visible + cierre al clic fuera del modal
+- [x] Animación de entrada del modal: fade + scale in
+- [x] Botón de cierre visible + cierre al clic fuera del modal
 
 ---
 

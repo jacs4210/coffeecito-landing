@@ -171,6 +171,26 @@ h1, h2, h3 { font-family: var(--font-display); line-height: 1.15; }
   transform: translateY(-2px);
 }
 
+/* Botón contorno (outline) con colores de marca */
+.btn-outline {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.8rem 2rem;
+  border-radius: var(--radius-xl);
+  font-weight: 500;
+  transition: all var(--transition);
+  text-decoration: none;
+  background: transparent;
+  color: var(--color-accent);
+  border: 1px solid var(--color-accent);
+}
+.btn-outline:hover {
+  background: rgba(212, 168, 67, 0.1);
+  color: var(--color-accent);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
 /* Botón de tarifa — contexto de precios */
 .btn-tarifa {
   display: block;
@@ -503,10 +523,15 @@ h1, h2, h3 { font-family: var(--font-display); line-height: 1.15; }
 /* Fila 1: Grid de 4 tarjetas */
 .stats-metrics-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 1fr;
   gap: 1.25rem;
   margin-top: 3rem;
   text-align: left;
+}
+@media (min-width: 640px) {
+  .stats-metrics-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 @media (min-width: 1024px) {
   .stats-metrics-grid {
@@ -515,7 +540,7 @@ h1, h2, h3 { font-family: var(--font-display); line-height: 1.15; }
 }
 
 .stats-metric-card {
-  padding: 2rem;
+  padding: 1.5rem;
   background: rgba(255,255,255,0.07);
   border-radius: var(--radius-lg);
   display: flex;
@@ -646,48 +671,65 @@ h1, h2, h3 { font-family: var(--font-display); line-height: 1.15; }
 /* ═══════════════════════════════════════════════
    MARCAS — MARQUEE
 ═══════════════════════════════════════════════ */
-.marcas-section { background: var(--color-surface); text-align: center; }
-.marcas-section .container { margin-bottom: 3rem; }
-.marquee-wrapper {
-  overflow: hidden;
-  width: 100%;
-  padding: 1rem 0;
-  mask-image: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
-  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
+.marcas-section {
+  background: var(--color-surface-alt);
+  text-align: center;
 }
-.marquee-track {
+.marcas-section .container { margin-bottom: 3rem; }
+
+.marcas-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.marca-card {
+  width: calc(25% - 1.125rem); /* Aproximadamente 4 columnas */
+  background: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 0.75rem; /* Reducimos el padding para que el logo ocupe más ratio */
   display: flex;
   align-items: center;
-  gap: 1.5rem;
-  width: max-content;
-  animation: marqueeScroll 28s linear infinite;
-}
-.marquee-item {
-  display: inline-flex;
-  align-items: center;
-  gap: 1rem;
-  white-space: nowrap;
-  padding: 0 1rem;
-}
-.marquee-logo-img {
-  height: 28px;
-  width: auto;
-  object-fit: contain;
-  /* Fondo uniforme para logos con fondos dispares */
-  filter: grayscale(1) opacity(0.55);
+  justify-content: center;
+  min-height: 120px;
   transition: all var(--transition);
 }
-.marquee-item:hover .marquee-logo-img {
-  filter: grayscale(0) opacity(1);
-  transform: scale(1.1);
+
+@media (max-width: 1024px) {
+  .marca-card { width: calc(33.333% - 1rem); }
 }
-.marquee-sep {
-  color: var(--color-secondary);
-  font-size: 0.8rem;
-  flex-shrink: 0;
-  opacity: 0.5;
+@media (max-width: 640px) {
+  .marca-card { width: calc(50% - 0.75rem); }
 }
-.marquee-wrapper:hover .marquee-track { animation-play-state: paused; }
+
+.marca-card:hover {
+  border-color: var(--color-rose-accent, var(--color-accent)); /* Fallback a accent si rose no existe */
+  box-shadow: var(--shadow-sm);
+  transform: translateY(-3px);
+}
+
+.marca-card img {
+  max-height: 80px;
+  max-width: min(100%, 185px); /* Previene salirse del recuadro en móviles mientras limita a 185px en desktop */
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  filter: none;
+  opacity: 1;
+}
+
+/* Filtro utilitario: vuelve logos blancos -> negros sólidos para contraste en tarjeta */
+.logo-black-filter {
+  filter: brightness(0) !important;
+}
+
+/* Modificador para obligar el aumento en escala de logos con mucho padding interno o canvas muy cuadrado */
+.logo-xl {
+  transform: scale(1.35);
+}
+
 
 
 /* ═══════════════════════════════════════════════

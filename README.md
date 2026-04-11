@@ -18,13 +18,19 @@ Creadora de contenido · Home Barista · Lifestyle
 │   └── emailjs.js          ← Formulario + envío de PDF
 ├── assets/
 │   ├── images/
-│   │   ├── hero-bg.png     ← Imagen de fondo hero
-│   │   └── logos/          ← Logos de marcas colaboradoras
+│   │   ├── hero-bg.png         ← Imagen de fondo hero
+│   │   └── collaborations/     ← Directorio estático de alianzas
 │   └── pdf/
 │       └── coffeecito-media-kit.pdf
 ├── netlify.toml            ← Configuración de Netlify
 └── PLAN.md                 ← Plan completo del proyecto
 ```
+
+## Avance de Proyecto
+- **Fase 1:** Completada — Estructura Visual.
+- **Fase 2:** Completada — Hero Pitch y Valor.
+- **Fase 3:** Completada — Panel de métricas e identidad con la comunidad.
+- **Fase 4:** Completada — Autoridad Flex y refactor estático de marcas.
 
 ## Deploy
 
