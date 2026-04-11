@@ -1,7 +1,7 @@
 # PROJECT_CONTEXT.md
 
 > Archivo generado automáticamente por el agente de Antigravity.
-> Última actualización: 2026-04-10T22:30:00-05:00
+> Última actualización: 2026-04-10T23:30:00-05:00
 > No editar manualmente — regenerar con la skill `.agents/skills/update-project-context/SKILL.md`
 
 ---
@@ -30,10 +30,12 @@
 - N/A (Persistencia no requerida en cliente estático).
 
 ### Herramientas de build y desarrollo
-- **Vanilla Static**: No utiliza empaquetadores (No npm/vite/webpack).
-- **Netlify**: Hosting y gestión de despliegue.
+- **Vanilla Static**: No utiliza empaquetadores (No npm/vite/webpack para transpilación).
+- **Node.js 24 & npm**: Para entorno de desarrollo local (Scripts de Linting).
+- **Linters**: HTMLHint, Stylelint, ESLint.
 
 ### Testing
+- **Linters**: Calidad estática de código automatizada (HTML, CSS, JS).
 - **Manual**: Pruebas de responsividad e interacciones de formularios.
 
 ---
@@ -46,11 +48,13 @@
 ```
 .
 ├── .agents/                # Configuraciones de IA (rules, skills, workflows)
+├── .github/workflows/      # Pipeline CI/CD (main.yml)
 ├── assets/                 # Recursos multimedia y documentos
 │   ├── images/             # Imágenes y logos de marcas
 │   └── pdf/                # Media Kit (coffeecito-media-kit.pdf)
 ├── scripts/                # Lógica JS (main.js, emailjs.js)
 ├── styles/                 # Estilos (main.css, animations.css)
+├── package.json            # Dependencias Dev JS/CSS Linters
 ├── index.html              # Punto de entrada principal
 └── netlify.toml            # Configuración de despliegue
 ```
@@ -71,10 +75,10 @@
 - **Descarga de PDF**: Configuración de headers en Netlify para descarga forzada del Media Kit.
 
 **Últimos cambios detectados:**
+- **Pipeline CI/CD**: Se implementó de manera completa un pipeline para GitHub actions en `.github/workflows/main.yml`, integrando en Node.js 24 escaneos de seguridad (`Gitleaks`, `CodeQL SAST`), validación con Linters (HTMLHint, Stylelint, ESLint) pre-establecidos para mitigar deudas técnicas en HTML/CSS/JS y la automatización formal de despliegues (vía CLI) a Netlify.
 - **Fase 4 (Marcas / Autoridad)**: Rediseño total de la sección de marcas bajo paradigma estático de Flexbox. Inserción de micro-animaciones (Scroll Staggering) y depuración de módulos de carrusel rotativo.
 - **Fase 3 (Métricas y Comunidad)**: Implementación de la sección de red/comunidad con métricas actualizadas y un ecosistema layout `1fr` pulido ante dispositivos menores (Abril 2026).
 - **Fase 2 (Hero/Visuals)**: Actualización del Hero con video placeholder y narrativa editorial.
-- **Fase 1 (Design System)**: Establecimiento de la identidad visual y sistema de diseño base.
 
 ---
 
@@ -92,15 +96,16 @@
 
 ## CI/CD y despliegue
 
-**Herramienta CI/CD:** Netlify + GitHub Actions (implícito en el flujo de Netlify).
-**Archivo de configuración:** [netlify.toml](https://github.com/jacs4210/coffeecito-landing/blob/main/netlify.toml)
+**Herramienta CI/CD:** GitHub Actions.
+**Archivo de configuración:** `.github/workflows/main.yml`
 
 **Stages del pipeline:**
-1. **Build**: No aplica (Static).
-2. **Deploy**: Despliegue automático al pushear a `main`.
+1. **Security Scan**: Análisis superficial (`Gitleaks` para Secretos) e Inteligencia SAST (`CodeQL`).
+2. **Linting & Validation**: Escaneos locales mediante Caché de dependencias NPM (Node.js 24).
+3. **Deploy**: Ejecución vía `Netlify CLI` para publicar a producción en base a la confirmación de la rama.
 
 **Triggers:**
-- Push a la rama `main`.
+- Push y Pull Requests a la rama `main`.
 
 **Entornos:**
 - **Production**: [https://coffeecito.netlify.app](https://coffeecito.netlify.app)
@@ -117,9 +122,15 @@
 
 **Comandos principales:**
 ```bash
-# No requiere instalación de dependencias npm
+# Instalar dependencias para linters (Dev Dependencies)
+npm install
 
-# Correr en desarrollo (ejemplo con serve)
+# Correr linters para verificar calidad
+npm run lint:html
+npm run lint:css
+npm run lint:js
+
+# Correr en desarrollo
 npx serve .
 ```
 
@@ -136,7 +147,7 @@ EMAILJS_TEMPLATE_ID=
 
 - **Nombrado de archivos:** kebab-case (ej: `emailjs.js`, `hero-bg.png`).
 - **Nombrado de componentes:** Clases CSS siguiendo una nomenclatura descriptiva (no formal BEM, pero orientada a secciones).
-- **Linter:** N/A (Manual).
+- **Linter:** `htmlhint` (estructura HTML), `stylelint` (formato Vanilla CSS), `eslint` (para `emailjs` global).
 - **Formatter:** N/A (Manual).
 - **Commits:** Prefijos `Feat:`, `Fix:` (Observado en el historial).
 
