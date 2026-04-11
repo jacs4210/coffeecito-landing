@@ -644,6 +644,10 @@ h1, h2, h3 { font-family: var(--font-display); line-height: 1.15; }
   z-index: 0;
 }
 
+.reel-thumb .reels-placeholder {
+  margin-top: 4.5rem;
+}
+
 .reels-actual-img {
   position: absolute;
   top: 0;
@@ -764,6 +768,9 @@ h1, h2, h3 { font-family: var(--font-display); line-height: 1.15; }
   background-position: center;
   background-color: var(--color-highlight);
   overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .reel-thumb::after {
   content: '';
@@ -820,6 +827,30 @@ h1, h2, h3 { font-family: var(--font-display); line-height: 1.15; }
   color: white;
   font-weight: 500;
 }
+.content-type-badge {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+  z-index: 2;
+  background: rgba(0,0,0,0.45);
+  backdrop-filter: blur(6px);
+  color: white;
+  font-size: 0.7rem;
+  font-weight: 600;
+  padding: 0.3rem 0.65rem;
+  border-radius: var(--radius-sm);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border: 1px solid rgba(255,255,255,0.1);
+}
+.hidden-reel {
+  display: none !important;
+}
+.load-more-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
 .reel-stat {
   padding: 0.85rem 1.25rem;
   font-size: var(--text-sm);
@@ -845,228 +876,21 @@ h1, h2, h3 { font-family: var(--font-display); line-height: 1.15; }
 
 
 /* ═══════════════════════════════════════════════
-   TARIFAS
-═══════════════════════════════════════════════ */
-.tarifas-section { background: var(--color-surface); }
-.tarifas-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1.5rem;
-  margin-top: 2.5rem;
-}
-
-/* Tarjeta campaña ocupa 2 columnas */
-.tarifa-card.campaña {
-  grid-column: span 2;
-  background: var(--color-primary);
-}
-.tarifa-card.campaña .tarifa-icon { color: var(--color-accent); }
-.tarifa-card.campaña .tarifa-nombre { color: var(--color-white); }
-.tarifa-card.campaña .tarifa-precio { color: var(--color-accent); }
-.tarifa-card.campaña .tarifa-precio span { color: rgba(232,201,160,0.6); }
-.tarifa-card.campaña .tarifa-incluye li { color: rgba(255,255,255,0.75); }
-.tarifa-card.campaña .tarifa-incluye li::before { color: var(--color-accent); }
-
-.tarifa-card {
-  position: relative;
-  background: var(--color-white);
-  border-radius: var(--radius-lg);
-  padding: 2rem 1.75rem;
-  border: 1px solid var(--color-border);
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  transition: all var(--transition);
-  box-shadow: var(--shadow-sm);
-}
-.tarifa-card:hover {
-  transform: translateY(-6px);
-  box-shadow: var(--shadow-md);
-}
-.tarifa-card.popular {
-  border: 2px solid var(--color-secondary);
-  background: var(--color-surface-alt);
-}
-.tarifa-badge {
-  position: absolute;
-  top: -1px;
-  left: 50%;
-  transform: translateX(-50%);
-  background: var(--color-secondary);
-  color: var(--color-white);
-  font-size: 0.72rem;
-  font-weight: 700;
-  letter-spacing: 0.05em;
-  padding: 0.3rem 1rem;
-  border-radius: 0 0 var(--radius-sm) var(--radius-sm);
-  white-space: nowrap;
-  display: flex;
-  align-items: center;
-  gap: 0.35rem;
-}
-
-/* Ícono SVG dentro de tarjeta de tarifa */
-.tarifa-icon {
-  width: 40px;
-  height: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--color-secondary);
-}
-.tarifa-nombre {
-  font-family: var(--font-display);
-  font-size: var(--text-xl);
-  font-weight: 600;
-  color: var(--color-text);
-}
-.tarifa-precio {
-  font-family: var(--font-display);
-  font-size: var(--text-2xl);
-  font-weight: 700;
-  color: var(--color-text);
-  line-height: 1;
-}
-.tarifa-precio span {
-  font-size: var(--text-sm);
-  color: var(--color-text-muted);
-  font-family: var(--font-body);
-}
-.tarifa-incluye {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  gap: 0.4rem;
-}
-.tarifa-incluye li {
-  font-size: var(--text-sm);
-  color: var(--color-text-muted);
-  display: flex;
-  align-items: flex-start;
-  gap: 0.5rem;
-}
-.tarifa-incluye li::before {
-  content: '✓';
-  color: var(--color-secondary);
-  font-weight: 700;
-  flex-shrink: 0;
-}
+879:    TARIFAS (OCULTO TEMPORALMENTE)
+880: ═══════════════════════════════════════════════ */
+/*
+.tarifas-section { ... }
+...
+*/
 
 
 /* ═══════════════════════════════════════════════
-   CONTACTO
-═══════════════════════════════════════════════ */
-.contacto-section {
-  background: var(--color-surface-dark);
-}
-.contacto-grid {
-  display: grid;
-  grid-template-columns: 0.9fr 1.1fr;
-  gap: 4rem;
-  align-items: start;
-}
-.contacto-desc {
-  color: rgba(255,255,255,0.75);
-  margin-bottom: 2rem;
-  font-size: var(--text-lg);
-}
-.contacto-links {
-  display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
-}
-.contacto-link {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.6rem;
-  color: rgba(255,255,255,0.8);
-  font-size: 0.95rem;
-  font-weight: 500;
-  transition: all var(--transition);
-  padding: 0.5rem 0;
-}
-.contacto-link:hover {
-  color: var(--color-accent);
-  transform: translateX(4px);
-}
-.contacto-form-wrap {
-  background: rgba(255,255,255,0.06);
-  backdrop-filter: blur(12px);
-  border: 1px solid rgba(255,255,255,0.12);
-  border-radius: var(--radius-lg);
-  padding: 2.5rem;
-}
-.contacto-form { display: flex; flex-direction: column; gap: 1.25rem; }
-.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
-.form-group { display: flex; flex-direction: column; gap: 0.4rem; }
-.form-group label {
-  font-size: 0.825rem;
-  font-weight: 600;
-  color: rgba(255,255,255,0.7);
-  letter-spacing: 0.03em;
-}
-.form-group input,
-.form-group select,
-.form-group textarea {
-  padding: 0.8rem 1rem;
-  background: rgba(255,255,255,0.08);
-  border: 1px solid rgba(255,255,255,0.15);
-  border-radius: var(--radius-sm);
-  color: var(--color-white);
-  font-size: 0.95rem;
-  transition: border-color var(--transition), background var(--transition);
-  outline: none;
-}
-.form-group input::placeholder,
-.form-group textarea::placeholder {
-  color: rgba(255,255,255,0.35);
-}
-.form-group input:focus,
-.form-group select:focus,
-.form-group textarea:focus {
-  border-color: var(--color-accent);
-  background: rgba(255,255,255,0.12);
-}
-.form-group select option {
-  background: var(--color-primary);
-  color: var(--color-white);
-}
-.form-check {
-  display: flex;
-  align-items: center;
-  gap: 0.6rem;
-  cursor: pointer;
-}
-.form-check input[type="checkbox"] {
-  width: 18px;
-  height: 18px;
-  accent-color: var(--color-secondary);
-  cursor: pointer;
-  flex-shrink: 0;
-}
-.form-check label {
-  font-size: var(--text-sm);
-  color: rgba(255,255,255,0.75);
-  cursor: pointer;
-}
-.form-check label strong { color: var(--color-accent); }
-.form-disclaimer {
-  font-size: 0.78rem;
-  color: rgba(255,255,255,0.4);
-  text-align: center;
-}
-.form-success {
-  text-align: center;
-  padding: 3rem 1rem;
-}
-.success-icon { font-size: 3rem; margin-bottom: 1rem; }
-.form-success h3 {
-  font-family: var(--font-display);
-  font-size: var(--text-2xl);
-  color: var(--color-white);
-  margin-bottom: 0.75rem;
-}
-.form-success p { color: rgba(255,255,255,0.7); }
+988:    CONTACTO (OCULTO TEMPORALMENTE)
+989: ═══════════════════════════════════════════════ */
+/*
+.contacto-section { ... }
+...
+*/
 
 
 /* ═══════════════════════════════════════════════
@@ -1130,7 +954,6 @@ h1, h2, h3 { font-family: var(--font-display); line-height: 1.15; }
   .tarifas-grid { grid-template-columns: repeat(2, 1fr); }
   .tarifa-card.campaña { grid-column: span 2; }
   .reels-grid { grid-template-columns: repeat(2, 1fr); }
-  .reels-grid .reel-card:nth-child(3) { display: none; }
 }
 
 @media (max-width: 768px) {
@@ -1167,7 +990,8 @@ h1, h2, h3 { font-family: var(--font-display); line-height: 1.15; }
 
   /* Reels */
   .reels-grid { grid-template-columns: 1fr; }
-  .reels-grid .reel-card:nth-child(3) { display: block; }
+  .reel-card { max-width: 380px; margin: 0 auto; width: 100%; }
+  .reel-thumb { aspect-ratio: 4/5; }
 
   /* Tarifas */
   .tarifas-grid { grid-template-columns: 1fr; }

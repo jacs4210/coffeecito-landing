@@ -66,10 +66,10 @@
 ## Fase 5 — Contenido y rendimiento
 *Prioridad: media. Refuerza la credibilidad creativa.*
 
-- [ ] Añadir miniaturas reales o preview visual de los reels destacados
-- [ ] Incluir indicador del tipo de contenido por card (Reel, Tutorial, Reseña…)
-- [ ] Agregar más de 3 piezas de contenido, con opción de "Ver más"
-- [ ] Indicar visualmente que los links abren en Instagram (ícono externo)
+- [x] Añadir miniaturas reales o preview visual de los reels destacados
+- [x] Incluir indicador del tipo de contenido por card (Reel, Tutorial, Reseña…)
+- [x] Agregar más de 3 piezas de contenido, con opción de "Ver más"
+- [x] Indicar visualmente que los links abren en Instagram (ícono externo)
 
 ---
 

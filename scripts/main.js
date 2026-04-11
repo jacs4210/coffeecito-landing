@@ -180,3 +180,31 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 
   sections.forEach(s => observer.observe(s));
 })();
+
+/* ─── LOAD MORE REELS ────────────────────────── */
+(function initLoadMoreReels() {
+  const btn = document.getElementById('btn-load-more-reels');
+  const hiddenReels = document.querySelectorAll('.hidden-reel');
+
+  if (!btn || !hiddenReels.length) return;
+
+  btn.addEventListener('click', () => {
+    // Reveal hidden reels
+    hiddenReels.forEach((reel, index) => {
+      // Small stagger effect for a smooth entrance
+      setTimeout(() => {
+        reel.classList.remove('hidden-reel');
+        // Let the CSS reveal animation trigger
+        reel.classList.add('reveal', 'visible');
+      }, index * 150);
+    });
+
+    // Hide the button container once clicked
+    const container = btn.closest('.load-more-container');
+    if (container) {
+      container.style.display = 'none';
+    } else {
+      btn.style.display = 'none';
+    }
+  });
+})();
