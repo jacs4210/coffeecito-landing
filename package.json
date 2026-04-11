@@ -1,0 +1,17 @@
+{
+  "name": "coffeecito-landing",
+  "version": "1.0.0",
+  "description": "Coffeecito Landing Page Frontend",
+  "private": true,
+  "scripts": {
+    "lint:html": "htmlhint \"*.html\"",
+    "lint:css": "stylelint \"styles/**/*.css\"",
+    "lint:js": "eslint \"scripts/**/*.js\""
+  },
+  "devDependencies": {
+    "eslint": "^8.57.0",
+    "htmlhint": "^1.1.4",
+    "stylelint": "^16.2.1",
+    "stylelint-config-standard": "^36.0.0"
+  }
+}

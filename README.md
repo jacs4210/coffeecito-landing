@@ -3,8 +3,6 @@
 Portafolio digital de **Angelica Correa** | `@coffeecito.ac`  
 Creadora de contenido · Home Barista · Lifestyle
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/e67e7d7b-a7b1-4c1e-b1b6-1c4020ddbb69/deploy-status)](https://app.netlify.com/projects/coffeecito-landing/deploys)
-
 ## Estructura del Proyecto
 
 ```
