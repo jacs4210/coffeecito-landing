@@ -59,6 +59,12 @@ Revisa los siguientes archivos según corresponda al proyecto:
 - Observa el patrón de nombrado de archivos y carpetas en el codebase
 - Identifica si hay convenciones de commits (`.commitlintrc`, `CONTRIBUTING.md`)
 
+### 7. Mapea dependencias y criterios de éxito
+- Identifica qué archivos se referencian mutuamente (imports, clases CSS usadas en JS, IDs del DOM)
+- Por cada sección visible del proyecto, busca en el PROJECT_CONTEXT.md existente si ya hay 
+  un Definition of Done definido — si no existe, crear entradas vacías con `[COMPLETAR]`
+- Lee el directorio `.agents/skills/` y lista todas las skills encontradas con su descripción
+
 ---
 
 ## Estructura del archivo a generar
